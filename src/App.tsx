@@ -9,7 +9,7 @@ import instagram from "./assets/instagram.png";
 function App() {
   return (
     <>
-      <section className="section-intro relative h-[55  0px]">
+      <section className="section-intro relative h-[550px]">
         <img src={planeImage} className="h-[230px]" />
 
         <h1 className="text-white text-[6.7em] font-normal absolute bottom-0 ">
