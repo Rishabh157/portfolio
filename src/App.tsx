@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import planeImage from "./assets/plane.gif";
 import faceImage from "./assets/rishabh-images.jfif";
 import github from "./assets/github.png";
@@ -6,6 +5,31 @@ import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
 import instagram from "./assets/instagram.png";
 import Projects from "./components/Projects";
+import Statistics from "./components/Statistics";
+
+
+const myStatistics: {
+  title: string
+  value: string
+}[] = [
+    {
+      title: 'lines of code',
+      value: '160 000'
+    },
+    {
+      title: 'pixels rendered',
+      value: '301 783 509'
+    },
+    {
+      title: 'cup of chai',
+      value: '300+'
+    },
+    {
+      title: 'projects completed',
+      value: '22+'
+    },
+  ]
+
 
 function App() {
   return (
@@ -52,7 +76,7 @@ function App() {
             </div>
           </div>
 
-          <div className="about-section">
+          <div>
 
             <h2 className="text-light-dark font-extralight tracking-widest text-[70px]">About me.</h2>
 
@@ -91,9 +115,16 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="about-hr-line"></div>
-        <div className="section-statistics">
-          <div>
+        <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
+
+        <div className="section-statistics grid lg:grid-cols-4 text-center mt-[40px] section-statistics">
+          {
+            myStatistics?.map(ele => (
+              <Statistics key={ele.value} title={ele.title} value={ele.value} />
+            ))
+          }
+
+          {/* <div>
             <h5>160 000</h5>
             <span>lines of code</span>
           </div>
@@ -108,7 +139,7 @@ function App() {
           <div>
             <h5>26+</h5>
             <span>projects completed</span>
-          </div>
+          </div> */}
         </div>
       </section>
 

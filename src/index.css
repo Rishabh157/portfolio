@@ -31,17 +31,6 @@ body {
 
 /* About */
 /****** About ********/
-
-/* .about-section p { */
-  /* font-weight: 400; */
-  /* word-spacing: 5px; */
-  /* color: #838383; */
-  /* font-size: 23px; */
-  /* margin-top: 30px; */
-  /* margin-bottom: 30px; */
-  /* text-rendering: optimizeLegibility; */
-/* } */
-
 a {
   border-bottom: 1px solid #e7e7e7;
   transition: 0.2s all ease;
@@ -54,25 +43,14 @@ a:hover {
   border-bottom: 1px solid #009ca8;
 }
 
-.about-hr-line {
-  border-bottom: 3px solid #e7e7e7;
-}
-
-.section-statistics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-  margin-top: 40px;
-}
-
 .section-statistics h5 {
-  font-family: "Lexend", sans-serif;
-  color: #009ca8;
-  font-size: 2.5rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
-  font-weight: normal;
-  text-align: center;
+  /* font-family: "Lexend", sans-serif; */
+  /* color: #009ca8; */
+  /* font-size: 2.5rem; */
+  /* margin-top: 0.2rem; */
+  /* margin-bottom: 0.5rem; */
+  /* font-weight: normal; */
+  /* text-align: center; */
 }
 
 .section-statistics span {
