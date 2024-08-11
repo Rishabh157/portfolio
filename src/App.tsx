@@ -9,10 +9,10 @@ import instagram from "./assets/instagram.png";
 function App() {
   return (
     <>
-      <section className="section-intro relative h-[550px]">
+      <section className="section-intro flex justify-center relative h-[550px]">
         <img src={planeImage} className="h-[230px]" />
 
-        <h1 className="text-white text-[6.7em] font-normal absolute bottom-0 ">
+        <h1 className="name-font-custom-importan text-white text-[6.7em] font-normal absolute bottom-0">
           Rishabh Gour
         </h1>
         <p className="text-white text-[30px] font-normal absolute bottom-0 ">

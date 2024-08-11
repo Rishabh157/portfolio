@@ -6,24 +6,26 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #fff;
+  font-family: "Lexend", sans-serif;
+  height: 3000px;
 }
 
 .section-intro {
   background: url("./src/assets/clouds.png") repeat-x top center;
   background-size: contain;
   background-repeat: repeat;
-  background-color: #41b0bf;
+  /* background-color: #41b0bf; */
   padding-bottom: 70px;
-  position: relative;
   border-right: 20px solid #fff;
   border-left: 20px solid #fff;
   border-top: 20px solid #fff;
   padding-top: 80px;
-  display: flex;
-  justify-content: center;
+  /* position: relative; */
+  /* display: flex;
+  justify-content: center; */
 }
 
-.section-intro h1 {
+.name-font-custom-importan {
   font-family: "Sacramento", cursive !important;
 }
 
@@ -107,6 +109,7 @@ section img {
 }
 
 .section-statistics h5 {
+  font-family: "Lexend", sans-serif;
   color: #009ca8;
   font-size: 2.5rem;
   margin-top: 0.2rem;
