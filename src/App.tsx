@@ -47,7 +47,7 @@ function App() {
       </section>
 
       {/* <!-- About --> */}
-      <section className="mt-[150px] px-[40px]">
+      <section className="my-[150px] px-[40px]">
 
         <div className="grid gap-[40px] laptop:grid-cols-[0.5fr_1fr] mobile::grid-cols-1 mb-[40px]">
 
@@ -115,39 +115,20 @@ function App() {
             </p>
           </div>
         </div>
+
         <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
 
-        <div className="section-statistics grid lg:grid-cols-4 text-center mt-[40px] section-statistics">
-          {
-            myStatistics?.map(ele => (
-              <Statistics key={ele.value} title={ele.title} value={ele.value} />
-            ))
-          }
-
-          {/* <div>
-            <h5>160 000</h5>
-            <span>lines of code</span>
-          </div>
-          <div>
-            <h5>301 783 509</h5>
-            <span>pixels rendered</span>
-          </div>
-          <div>
-            <h5>1 512</h5>
-            <span>cup of chai</span>
-          </div>
-          <div>
-            <h5>26+</h5>
-            <span>projects completed</span>
-          </div> */}
+        <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[40px] section-statistics">
+          {myStatistics?.map(ele => (
+            <Statistics key={ele.value} title={ele.title} value={ele.value} />
+          ))}
         </div>
       </section>
 
-
+      <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
 
       {/* <!-- Projects --> */}
 
-      {/* <Projects /> */}
 
 
     </>
