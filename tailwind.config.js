@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       colors: {
         primary: "#41b0bf",
+        "light-dark": "#3a3a3a",
+      },
+      letterSpacing: {
+        widest: "5px",
       },
     },
   },

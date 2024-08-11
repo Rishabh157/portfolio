@@ -5,6 +5,7 @@ import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
 import instagram from "./assets/instagram.png";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -22,33 +23,40 @@ function App() {
       </section>
 
       {/* <!-- About --> */}
-      <section className="mt-[150px]">
-        <div className="section-container">
-          <div className="img-section">
-            <img src={faceImage} alt="rishabh image" />
+      <section className="mt-[150px] px-[40px]">
 
-            <div className="social-media">
+        <div className="grid gap-[40px] grid-cols-[0.5fr_1fr] mb-[40px]">
+
+          <div className="flex flex-col justify-end items-center">
+
+            {/* Image */}
+            <img className="inline-block rounded-full h-[300px]" src={faceImage} alt="rishabh image" />
+
+            {/* Social Medias */}
+            <div className="flex gap-[10px] mt-[20px]">
               <a href="https://github.com/rishabh157" target="_blank">
-                <img src={github} />
+                <img className="inline-block h-[50px] rounded-full" src={github} />
               </a>
               <a
                 href="https://www.linkedin.com/in/rishabh-gour-3b0861221/"
                 target="_blank"
               >
-                <img src={linkedin} />
+                <img className="inline-block h-[50px] rounded-full" src={linkedin} />
               </a>
               <a href="https://x.com/Rishabhgour157" target="_blank">
-                <img src={twitter} />
+                <img className="inline-block h-[50px] rounded-full" src={twitter} />
               </a>
               <a href="https://www.instagram.com/rishabh._.30/" target="_blank">
-                <img src={instagram} />
+                <img className="inline-block h-[50px] rounded-full" src={instagram} />
               </a>
             </div>
           </div>
 
           <div className="about-section">
-            <h2>About me.</h2>
-            <p>
+
+            <h2 className="text-light-dark font-extralight tracking-widest text-[70px]">About me.</h2>
+
+            <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
               Hi I am <a href="/">Rihsabh Gour</a>, a 22 year old Full stack
               software developer, living in{" "}
               <a
@@ -66,7 +74,7 @@ function App() {
               6-month contract, developing their entire ERP application. */}
             </p>
 
-            <p>
+            <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
               Have a look at my{" "}
               <a target="_blank" href="https://github.com/rishabh157">
                 Github Profile
@@ -103,6 +111,14 @@ function App() {
           </div>
         </div>
       </section>
+
+
+
+      {/* <!-- Projects --> */}
+
+      <Projects />
+
+
     </>
   );
 }

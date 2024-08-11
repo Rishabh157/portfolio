@@ -32,60 +32,17 @@ body {
 /* About */
 /****** About ********/
 
-section {
-  padding: 0px 40px;
-}
+/* .about-section p { */
+  /* font-weight: 400; */
+  /* word-spacing: 5px; */
+  /* color: #838383; */
+  /* font-size: 23px; */
+  /* margin-top: 30px; */
+  /* margin-bottom: 30px; */
+  /* text-rendering: optimizeLegibility; */
+/* } */
 
-section .section-container {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.img-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-}
-
-section img {
-  display: inline-block;
-  border-radius: 50%;
-  height: 300px;
-}
-
-.social-media {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0px;
-}
-
-.social-media img {
-  display: inline-block;
-  height: 55px;
-}
-
-.about-section h2 {
-  /* font-family: "Noto Sans Gothic", sans-serif; */
-  color: #3a3a3a;
-  font-weight: 200;
-  font-size: 70px;
-  font-style: normal;
-}
-
-.about-section p {
-  font-weight: 400;
-  word-spacing: 5px;
-  color: #838383;
-  font-size: 23px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-rendering: optimizeLegibility;
-}
-
-.about-section p a {
+a {
   border-bottom: 1px solid #e7e7e7;
   transition: 0.2s all ease;
   cursor: pointer;
@@ -93,7 +50,7 @@ section img {
   color: #838383;
 }
 
-.about-section p a:hover {
+a:hover {
   border-bottom: 1px solid #009ca8;
 }
 
