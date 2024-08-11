@@ -4,8 +4,8 @@ import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
 import instagram from "./assets/instagram.png";
-import Projects from "./components/Projects";
 import Statistics from "./components/Statistics";
+// import Projects from "./components/Projects";
 
 
 const myStatistics: {
@@ -49,7 +49,7 @@ function App() {
       {/* <!-- About --> */}
       <section className="mt-[150px] px-[40px]">
 
-        <div className="grid gap-[40px] grid-cols-[0.5fr_1fr] mb-[40px]">
+        <div className="grid gap-[40px] laptop:grid-cols-[0.5fr_1fr] mobile::grid-cols-1 mb-[40px]">
 
           <div className="flex flex-col justify-end items-center">
 
@@ -78,7 +78,7 @@ function App() {
 
           <div>
 
-            <h2 className="text-light-dark font-extralight tracking-widest text-[70px]">About me.</h2>
+            <h2 className="text-light-dark font-extralight tracking-widest  desktop:text-[70px] laptop:text-[70px] tablet:text-[50px] mobile:text-[24px]">About me.</h2>
 
             <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
               Hi I am <a href="/">Rihsabh Gour</a>, a 22 year old Full stack
@@ -147,7 +147,7 @@ function App() {
 
       {/* <!-- Projects --> */}
 
-      <Projects />
+      {/* <Projects /> */}
 
 
     </>

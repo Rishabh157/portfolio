@@ -14,22 +14,17 @@ body {
   background: url("./src/assets/clouds.png") repeat-x top center;
   background-size: contain;
   background-repeat: repeat;
-  /* background-color: #41b0bf; */
   padding-bottom: 70px;
   border-right: 20px solid #fff;
   border-left: 20px solid #fff;
   border-top: 20px solid #fff;
   padding-top: 80px;
-  /* position: relative; */
-  /* display: flex;
-  justify-content: center; */
 }
 
 .name-font-custom-importan {
   font-family: "Sacramento", cursive !important;
 }
 
-/* About */
 /****** About ********/
 a {
   border-bottom: 1px solid #e7e7e7;
@@ -41,26 +36,4 @@ a {
 
 a:hover {
   border-bottom: 1px solid #009ca8;
-}
-
-.section-statistics h5 {
-  /* font-family: "Lexend", sans-serif; */
-  /* color: #009ca8; */
-  /* font-size: 2.5rem; */
-  /* margin-top: 0.2rem; */
-  /* margin-bottom: 0.5rem; */
-  /* font-weight: normal; */
-  /* text-align: center; */
-}
-
-.section-statistics span {
-  color: #009ca8;
-  color: #3a3a3a;
-  -webkit-text-stroke: 0.2px #627175;
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-align: center;
-  line-height: 1;
-  font-style: normal;
-  cursor: default;
 }
