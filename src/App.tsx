@@ -50,7 +50,7 @@ function App() {
       </section>
 
       {/* <!-- About --> */}
-      <section className="my-[150px] px-[40px]">
+      <main className="my-[150px] px-[40px]">
 
         <div className="grid gap-[40px] laptop:grid-cols-[0.5fr_1fr] mobile::grid-cols-1 mb-[40px]">
 
@@ -125,7 +125,7 @@ function App() {
             <Statistics key={ele.value} title={ele.title} value={ele.value} />
           ))}
         </div>
-      </section>
+      </main>
 
       <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
 
