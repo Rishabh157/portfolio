@@ -73,7 +73,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className="desktop:flex laptop:flex tablet:block mobile:block justify-center  gap-x-10 items-start text-center mt-16 text-[#848484] text-[15px]">
+                <div className="desktop:flex laptop:flex tablet:block mobile:block justify-center  gap-x-20 items-start text-center mt-16 text-[#848484] text-[15px]">
 
                     <div>
                         <p className="font-normal"> <b> No </b> &#xa9; copyright issues.</p>
