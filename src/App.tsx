@@ -1,5 +1,5 @@
 import planeImage from "./assets/plane.gif";
-import faceImage from "./assets/rishabh-images.jfif";
+// import faceImage from "./assets/rishabh-images.jfif";
 import profilePic from "./assets/profile-pic.jpg";
 import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
