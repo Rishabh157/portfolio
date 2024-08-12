@@ -7,7 +7,6 @@ body {
   padding: 0px;
   background-color: #fff;
   font-family: "Lexend", sans-serif;
-  height: 4000px;
 }
 
 .section-intro {
@@ -36,4 +35,16 @@ a {
 
 a:hover {
   border-bottom: 1px solid #009ca8;
+}
+
+/****** Footer ********/
+.footer-bg {
+  background: url("./src/assets/footer.jpg") repeat-x top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 70px;
+  border-right: 20px solid #fff;
+  border-left: 20px solid #fff;
+  border-top: 20px solid #fff;
+  padding-top: 80px;
 }

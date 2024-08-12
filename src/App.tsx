@@ -1,5 +1,6 @@
 import planeImage from "./assets/plane.gif";
 import faceImage from "./assets/rishabh-images.jfif";
+import profilePic from "./assets/profile-pic.jpg";
 import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
@@ -56,7 +57,7 @@ function App() {
           <div className="flex flex-col justify-end items-center">
 
             {/* Image */}
-            <img className="inline-block rounded-full h-[300px]" src={faceImage} alt="rishabh image" />
+            <img className="inline-block rotate-[110deg] rounded-full h-[300px]" src={profilePic} alt="rishabh image" />
 
             {/* Social Medias */}
             <div className="flex gap-[10px] mt-[20px]">
@@ -131,12 +132,8 @@ function App() {
       {/* <!-- Projects --> */}
 
 
-
       {/* <!-- Footer --> */}
-      <section className="my-[100px] px-[40px]">
-        <Footer />
-      </section>
-
+      <Footer />
     </>
   );
 }
