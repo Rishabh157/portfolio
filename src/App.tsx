@@ -38,9 +38,9 @@ function App() {
   return (
     <>
       <section className="section-intro flex justify-center relative h-[550px]">
-        <img src={planeImage} className="h-[230px]" />
+        <img src={planeImage} className="h-[240px]" />
 
-        <h1 className="name-font-custom-importan text-white text-[6.7em] font-normal absolute bottom-0">
+        <h1 className="name-font-custom-importan text-white font-normal absolute bottom-8 desktop:text-[6.7em] laptop:text-[6.7em] tablet:text-[6.7em] mobile:text-[4.7em] z-50">
           Rishabh Gour
         </h1>
         <p className="text-white text-[30px] font-normal absolute bottom-0 ">
@@ -48,6 +48,13 @@ function App() {
         </p>
         {/* <a>COFFE WITH ME</a> */}
       </section>
+
+      {/* <h1 className="name-font-custom-importan text-black font-normal  desktop:text-[6.7em] laptop:text-[6.7em] tablet:text-[6.7em] mobile:text-[4.7em] z-50">
+        Rishabh Gour
+      </h1>
+      <p className="text-black text-[30px] font-normal  ">
+        I am <span>a web developer.</span>
+      </p> */}
 
       {/* <!-- About --> */}
       <main className="my-[150px] px-[40px]">
