@@ -10,7 +10,7 @@ body {
 }
 
 .section-intro {
-  background: url("./src/assets/clouds.png") repeat-x top center;
+  background: url("/src/assets/clouds.png") repeat-x top center;
   background-size: contain;
   background-repeat: repeat;
   padding-bottom: 70px;
@@ -39,7 +39,7 @@ a:hover {
 
 /****** Footer ********/
 .footer-bg {
-  background: url("./src/assets/footer.jpg") repeat-x top center;
+  background: url("/src/assets/footer.jpg") repeat-x top center;
   background-size: contain;
   background-repeat: no-repeat;
   padding-bottom: 70px;
