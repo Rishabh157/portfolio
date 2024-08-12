@@ -3,8 +3,10 @@ import faceImage from "./assets/rishabh-images.jfif";
 import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
-import instagram from "./assets/instagram.png";
+import gmail from "./assets/gmail.png";
 import Statistics from "./components/Statistics";
+import Footer from "./components/Footer";
+import SectionHeading from "./components/SectionHeading";
 // import Projects from "./components/Projects";
 
 
@@ -59,27 +61,26 @@ function App() {
             {/* Social Medias */}
             <div className="flex gap-[10px] mt-[20px]">
               <a href="https://github.com/rishabh157" target="_blank">
-                <img className="inline-block h-[50px] rounded-full" src={github} />
+                <img className="inline-block border-[#000000] p-[1px] border-[1px] h-[50px] rounded-full" src={github} alt="Github" />
               </a>
               <a
                 href="https://www.linkedin.com/in/rishabh-gour-3b0861221/"
                 target="_blank"
               >
-                <img className="inline-block h-[50px] rounded-full" src={linkedin} />
+                <img className="inline-block border-[#0b69c7] p-[1px] border-[1px] h-[50px] rounded-full" src={linkedin} alt="Linkedin" />
+              </a>
+              <a href="mailto:rishabh157@gmail.com" target="_blank">
+                <img className="inline-block border-[#e3e0e0] p-[1px] border-[1px] h-[50px] rounded-full" src={gmail} alt="Email" />
               </a>
               <a href="https://x.com/Rishabhgour157" target="_blank">
-                <img className="inline-block h-[50px] rounded-full" src={twitter} />
-              </a>
-              <a href="https://www.instagram.com/rishabh._.30/" target="_blank">
-                <img className="inline-block h-[50px] rounded-full" src={instagram} />
+                <img className="inline-block border-[#00a6de] p-[1px] border-[1px] h-[50px] rounded-full" src={twitter} alt="Twitter" />
               </a>
             </div>
           </div>
 
           <div>
 
-            <h2 className="text-light-dark font-extralight tracking-widest  desktop:text-[70px] laptop:text-[70px] tablet:text-[50px] mobile:text-[24px]">About me.</h2>
-
+            <SectionHeading heading="About Me" />
             <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
               Hi I am <a href="/">Rihsabh Gour</a>, a 22 year old Full stack
               software developer, living in{" "}
@@ -130,6 +131,11 @@ function App() {
       {/* <!-- Projects --> */}
 
 
+
+      {/* <!-- Footer --> */}
+      <section className="my-[100px] px-[40px]">
+        <Footer />
+      </section>
 
     </>
   );

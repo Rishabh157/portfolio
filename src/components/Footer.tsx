@@ -1,0 +1,113 @@
+import { useState } from "react"
+import SectionHeading from "./SectionHeading"
+
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
+import twitter from "../assets/twitter.png";
+import instagram from "../assets/instagram.png";
+
+type FormTypes = {
+    name: string
+    email: string
+    message?: string
+}
+
+const Footer = () => {
+
+    const [values, setValues] = useState<FormTypes>({
+        name: '',
+        email: '',
+        message: '',
+    })
+
+    return (
+        <div>
+            <div className="text-center">
+                <SectionHeading heading="Coffee with me." />
+                <p className="text-center text-[#838383] mb-[40px] text-[21px] font-extralight">I am always excited to work on some awesome projects, message me and let's discuss over coffee.</p>
+            </div>
+
+            <div className="flex flex-col gap-4 items-center justify-center">
+
+                <div className="desktop:flex laptop:flex tablet:block mobile:block gap-4 desktop:w-1/2 laptop:w-1/2 table:w-full mobile:w-full">
+                    <div className="w-full">
+                        <input
+                            required
+                            type="text"
+                            className="outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2 tablet:mb-4 mobile:mb-4"
+                            placeholder="Your Name"
+                            value={values.name}
+                            onChange={(event) => setValues((pre) => ({ ...pre, name: event?.target?.value }))}
+                        />
+                        {/* <span className="text-red-500 text-sm">Please Enter the name</span> */}
+                    </div>
+                    <div className="w-full">
+                        <input
+                            required
+                            type="email"
+                            className="outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2 tablet:mb-4 mobile:mb-4"
+                            placeholder="Your Email"
+                            value={values.email}
+                            onChange={(event) => setValues((pre) => ({ ...pre, email: event?.target?.value }))}
+                        />
+                    </div>
+                </div>
+                <textarea
+                    className="outline-none placeholder:font-light desktop:w-1/2 laptop:w-1/2 tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2"
+                    placeholder="Write a message for me here..."
+                    value={values.message}
+                    rows={4}
+                    onChange={(event) => setValues((pre) => ({ ...pre, message: event?.target?.value }))}
+                />
+
+                <div className="flex justify-end desktop:w-1/2 laptop:w-1/2 tablet:w-full mobile:w-full" >
+                    <button
+                        type="submit"
+                        className="bg-primary desktop:w-full laptop::w-full tablet:w-full mobile:w-full px-10 py-2 hover:bg-secondary hover:text-white transition-all rounded"
+                        onClick={() => console.log(values)}
+                    >
+                        Submit
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div className="text-center mt-16 text-[#848484] text-[15px]">
+                <p className="font-normal"> <b> No </b> &#xa9; copyright issues.</p>
+                <p className="font-light mt-2"> Feel free to copy. If you need any help, ping me !</p>
+
+                <p className="mt-4 name-font-custom-importan text-primary text-[3em] font-normal"> Rishabh Gour </p>
+
+                <p className="mt-4 text-[#848484] text-[15px] font-light"> Made with ❤️ in India </p>
+
+
+                <p className="mt-6 text-[#848484] text-[14px] font-light"> You can find me everywhere </p>
+
+                {/* Social Medias */}
+                <div className="flex gap-[10px] justify-center mt-2">
+                    <a href="https://github.com/rishabh157" target="_blank">
+                        <img className="inline-block h-[40px] rounded-full" src={github} />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/rishabh-gour-3b0861221/"
+                        target="_blank"
+                    >
+                        <img className="inline-block h-[40px] rounded-full" src={linkedin} />
+                    </a>
+                    <a href="https://x.com/Rishabhgour157" target="_blank">
+                        <img className="inline-block h-[40px] rounded-full" src={twitter} />
+                    </a>
+                    <a href="https://www.instagram.com/rishabh._.30/" target="_blank">
+                        <img className="inline-block h-[40px] rounded-full" src={instagram} />
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+    )
+}
+
+export default Footer
