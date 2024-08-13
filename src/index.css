@@ -6,6 +6,7 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #fff;
+  height: 5000px;
   font-family: "Lexend", sans-serif;
 }
 
@@ -31,11 +32,13 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: #838383;
+  &:hover {
+    border-bottom: 1px solid #009ca8;
+  }
 }
 
-a:hover {
-  border-bottom: 1px solid #009ca8;
-}
+/* a:hover {
+} */
 
 /****** Footer ********/
 .footer-bg {

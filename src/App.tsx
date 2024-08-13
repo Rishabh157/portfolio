@@ -8,8 +8,7 @@ import gmail from "./assets/gmail.png";
 import Statistics from "./components/Statistics";
 import Footer from "./components/Footer";
 import SectionHeading from "./components/SectionHeading";
-// import Projects from "./components/Projects";
-
+import { AnimationWords } from './components/AnimationWords'
 
 const myStatistics: {
   title: string
@@ -25,10 +24,10 @@ const myStatistics: {
     },
     {
       title: 'cup of chai',
-      value: '300+'
+      value: '100+'
     },
     {
-      title: 'projects completed',
+      title: 'projects contributed',
       value: '22+'
     },
   ]
@@ -40,18 +39,24 @@ function App() {
       <section className="section-intro flex justify-center relative h-[550px]">
         <img src={planeImage} className="h-[240px]" />
 
-        <h1 className="name-font-custom-importan text-white font-normal absolute bottom-8 desktop:text-[6.7em] laptop:text-[6.7em] tablet:text-[6.7em] mobile:text-[4.7em] z-50">
+        {/* <h1 className="name-font-custom-importan text-white font-normal absolute bottom-8 desktop:text-[6.7em] laptop:text-[6.7em] tablet:text-[6.7em] mobile:text-[4.7em] z-50">
           Rishabh Gour
-        </h1>
-        <p className="text-white text-[30px] font-normal absolute bottom-0 ">
-          I am <span>a web developer.</span>
-        </p>
+        </h1> */}
+
+        <div className="relative w-full">
+          <p className="text-white  text-[30px] font-normal absolute bottom-0 left-52">
+            I am <span> a  web <AnimationWords words={["Web Developer", "SEO Developer", "Frontend Developer", "Backend Developer"]} />.
+            </span>
+          </p>
+        </div>
         {/* <a>COFFE WITH ME</a> */}
       </section>
+
 
       {/* <h1 className="name-font-custom-importan text-black font-normal  desktop:text-[6.7em] laptop:text-[6.7em] tablet:text-[6.7em] mobile:text-[4.7em] z-50">
         Rishabh Gour
       </h1>
+      
       <p className="text-black text-[30px] font-normal  ">
         I am <span>a web developer.</span>
       </p> */}
@@ -136,12 +141,13 @@ function App() {
 
       <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
 
-      {/* <!-- Projects --> */}
-
 
       {/* <!-- Footer --> */}
       <Footer />
+
     </>
+
+
   );
 }
 
