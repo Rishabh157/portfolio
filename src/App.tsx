@@ -1,5 +1,3 @@
-import planeImage from "./assets/plane.gif";
-// import faceImage from "./assets/rishabh-images.jfif";
 import profilePic from "./assets/profile-pic.jpg";
 import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
@@ -8,7 +6,7 @@ import gmail from "./assets/gmail.png";
 import Statistics from "./components/Statistics";
 import Footer from "./components/Footer";
 import SectionHeading from "./components/SectionHeading";
-import { AnimationWords } from './components/AnimationWords'
+import { SparklesPreview } from "./components/SparklesPreview";
 
 const myStatistics: {
   title: string
@@ -32,34 +30,12 @@ const myStatistics: {
     },
   ]
 
-
 function App() {
+
   return (
     <>
-      <section className="section-intro flex justify-center relative h-[550px]">
-        <img src={planeImage} className="h-[240px]" />
-
-        {/* <h1 className="name-font-custom-importan text-white font-normal absolute bottom-8 desktop:text-[6.7em] laptop:text-[6.7em] tablet:text-[6.7em] mobile:text-[4.7em] z-50">
-          Rishabh Gour
-        </h1> */}
-
-        <div className="relative w-full">
-          <p className="text-white  text-[30px] font-normal absolute bottom-0 left-52">
-            I am <span> a  web <AnimationWords words={["Web Developer", "SEO Developer", "Frontend Developer", "Backend Developer"]} />.
-            </span>
-          </p>
-        </div>
-        {/* <a>COFFE WITH ME</a> */}
-      </section>
-
-
-      {/* <h1 className="name-font-custom-importan text-black font-normal  desktop:text-[6.7em] laptop:text-[6.7em] tablet:text-[6.7em] mobile:text-[4.7em] z-50">
-        Rishabh Gour
-      </h1>
-      
-      <p className="text-black text-[30px] font-normal  ">
-        I am <span>a web developer.</span>
-      </p> */}
+      {/* <!-- Intro Section With Sparkles Preview --> */}
+      <SparklesPreview />
 
       {/* <!-- About --> */}
       <main className="my-[150px] px-[40px]">
@@ -90,6 +66,7 @@ function App() {
               </a>
             </div>
           </div>
+
 
           <div>
 
@@ -130,9 +107,9 @@ function App() {
           </div>
         </div>
 
-        <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
+        <div className="desktop:hidden laptop:hidden tablet:hidden mobile:block border-b-[1px] border-b-[#e7e7e7]"></div>
 
-        <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[40px] section-statistics">
+        <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[180px] section-statistics">
           {myStatistics?.map(ele => (
             <Statistics key={ele.value} title={ele.title} value={ele.value} />
           ))}
@@ -140,7 +117,6 @@ function App() {
       </main>
 
       <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
-
 
       {/* <!-- Footer --> */}
       <Footer />

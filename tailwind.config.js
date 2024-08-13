@@ -8,6 +8,9 @@ module.exports = {
         secondary: "#009ca8",
         "light-dark": "#3a3a3a",
       },
+      backgroundColor: {
+        "bg-slate-950": "rgb(2 6 23 / 1)",
+      },
 
       screens: {
         mobile: "420px",

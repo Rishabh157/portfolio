@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
     "aceternity-ui": "0.2.2",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.0",

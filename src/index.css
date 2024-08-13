@@ -6,8 +6,18 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #fff;
-  height: 5000px;
   font-family: "Lexend", sans-serif;
+}
+
+.name-font-custom-important {
+  font-family: "Train One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+  /* Hunted */
+  /* font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
 }
 
 .section-intro {
@@ -15,14 +25,24 @@ body {
   background-size: contain;
   background-repeat: repeat;
   padding-bottom: 70px;
-  border-right: 20px solid #fff;
-  border-left: 20px solid #fff;
-  border-top: 20px solid #fff;
+  height: 40rem;
+  /* border-right: 20px solid #fff; */
+  /* border-left: 20px solid #fff; */
+  /* border-top: 20px solid #fff; */
   padding-top: 80px;
 }
 
-.name-font-custom-importan {
-  font-family: "Sacramento", cursive !important;
+/* Media query for screens 420px wide or smaller */
+@media (max-width: 470px) {
+  .section-intro {
+    height: 100vh;
+    background: url("/src/assets/clouds.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #41b0bf;
+    padding-bottom: 70px;
+    padding-top: 80px;
+  }
 }
 
 /****** About ********/
