@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="my-[100px] px-[40px]">
                 <div className="text-center">
                     <SectionHeading heading="Coffee with me." />
-                    <p className="text-center text-[#838383] mb-[40px] text-[21px] font-extralight">I am always excited to work on some awesome projects, message me and let's discuss over coffee.</p>
+                    <p className="text-center mb-[40px] text-[#3a3a3a] text-[0.2px] text-xl font-normal">I am always excited to work on some awesome projects, message me and let's discuss over coffee.</p>
                 </div>
 
                 <div className="flex flex-col gap-4 items-center justify-center">

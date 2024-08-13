@@ -50,7 +50,7 @@ function App() {
             {/* Social Medias */}
             <div className="flex gap-[10px] mt-[20px]">
               <a href="https://github.com/rishabh157" target="_blank">
-                <img className="inline-block border-[#000000] p-[1px] border-[1px] h-[50px] rounded-full" src={github} alt="Github" />
+                <img className="inline-blockborder-[#000000] p-[1px] border-[1px] h-[50px] rounded-full" src={github} alt="Github" />
               </a>
               <a
                 href="https://www.linkedin.com/in/rishabh-gour-3b0861221/"
@@ -70,6 +70,7 @@ function App() {
 
           <div>
 
+
             <SectionHeading heading="About Me" />
             <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
               Hi I am <a href="/">Rihsabh Gour</a>, a 22 year old Full stack
@@ -85,8 +86,6 @@ function App() {
               <a target="_blank" href="https://www.codiotic.com/">
                 Codiotic
               </a>
-              {/* . I am also currently working onsite with Provita IT Company on a
-              6-month contract, developing their entire ERP application. */}
             </p>
 
             <p className="font-normal text-[23px] text-[#838383] my-[30px] ">

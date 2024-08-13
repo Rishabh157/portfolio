@@ -3,7 +3,6 @@ import { SparklesCore } from "../../@/components/ui/sparkles";
 import planeImage from "../assets/plane.gif";
 import { AnimationWords } from "./AnimationWords";
 
-
 export function SparklesPreview() {
     const TITLES = ["Web developer", "SEO analyst", "Backend developer", "Mobile application developer", "Freelancer", "Proud Indian"]
 
@@ -24,7 +23,7 @@ export function SparklesPreview() {
                 <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
                 <div className="w-full text-center absolute top-2">
-                    <p className="text-white text-center font-normal desktop:text-[30px] laptop:text-[30px] tablet:text-[28px] mobile:text-[22px]">
+                    <p className="text-white text-center font-light desktop:text-[30px] laptop:text-[30px] tablet:text-[28px] mobile:text-[22px]">
                         I am <span> a <AnimationWords words={TITLES} />.
                         </span>
                     </p>
