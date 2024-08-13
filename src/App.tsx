@@ -7,6 +7,7 @@ import Statistics from "./components/Statistics";
 import Footer from "./components/Footer";
 import SectionHeading from "./components/SectionHeading";
 import { SparklesPreview } from "./components/SparklesPreview";
+import { IconCloudSkills } from "./components/IconCloudSkills";
 
 const myStatistics: {
   title: string
@@ -115,14 +116,36 @@ function App() {
         </div>
       </main>
 
-      <div className="border-b-[1px] border-b-[#e7e7e7]"></div>
+      <div className="border-b-[1px] border-b-[#e7e7e7] mb-16"></div>
 
+      {/* <!-- Skills --> */}
+      <div className="grid my-[100px] px-[40px] desktop:grid-cols-2 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
+        <div className="flex flex-col items-center mobile:mb-10">
+          <div>
+            <SectionHeading heading="Things I code with -" />
+
+            <ul className="text-bold list-disc desktop:text-lg pl-4 mt-4 flex flex-col gap-6">
+              <li>JavaScript: <span className="font-extralight">Because who doesn’t love a good async/await drama?</span> </li>
+              <li>React.js: <span className="font-extralight"> Making the impossible, possible—one hook at a time.</span></li>
+              <li>Next.js: <span className="font-extralight">For when you want SSR but also a side of SEO.  </span></li>
+              <li>Tailwind CSS: <span className="font-extralight"> Styling without the mess (and without the SASS). </span></li>
+              <li>Postman: <span className="font-extralight">Because even APIs need a little TLC (Testing, Love, and Care).</span></li>
+              <li>Git:  <span className="font-extralight">Turning code collaboration into a wild adventure. </span></li>
+              <li>TypeScript:  <span className="font-extralight">Adding types to your JavaScript chaos, because types are fun! </span></li>
+              <li>SCSS:  <span className="font-extralight">Preprocessing for when you need to preprocess your creativity. </span></li>
+              <li>Yarn/NPM: <span className="font-extralight"> Choosing between them is like picking your favorite child. </span></li>
+              <li>GitHub/GitLab: <span className="font-extralight"> Where your code gets a second chance to shine (or fail spectacularly). </span></li>
+            </ul>
+          </div>
+        </div>
+        <IconCloudSkills />
+      </div>
+
+
+      <div className="border-b-[1px] border-b-[#e7e7e7] mt-32"></div>
       {/* <!-- Footer --> */}
       <Footer />
-
     </>
-
-
   );
 }
 
