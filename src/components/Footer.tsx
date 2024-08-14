@@ -5,6 +5,7 @@ import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import twitter from "../assets/twitter.png";
 import instagram from "../assets/instagram.png";
+import { LinkPreviewer } from "./LinkPreviewer";
 
 type FormTypes = {
     name: string
@@ -65,7 +66,9 @@ const Footer = () => {
                         <button
                             type="submit"
                             className="bg-primary desktop:w-full laptop::w-full tablet:w-full mobile:w-full px-10 py-2 hover:bg-secondary hover:text-white transition-all rounded"
-                            onClick={() => console.log(values)}
+                            onClick={() => {
+                                // console.log(values)
+                            }}
                         >
                             Submit
                         </button>
@@ -90,21 +93,18 @@ const Footer = () => {
                         <p className="text-[#848484] text-[14px] font-light"> You can find me everywhere </p>
                         {/* Social Medias */}
                         <div className="flex gap-[10px] justify-center mt-2">
-                            <a href="https://github.com/rishabh157" target="_blank">
+                            <LinkPreviewer preview="https://github.com/rishabh157">
                                 <img className="inline-block h-[40px] rounded-full" src={github} />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/rishabh-gour-3b0861221/"
-                                target="_blank"
-                            >
+                            </LinkPreviewer>
+                            <LinkPreviewer preview="https://www.linkedin.com/in/rishabh-gour-3b0861221/">
                                 <img className="inline-block h-[40px] rounded-full" src={linkedin} />
-                            </a>
-                            <a href="https://x.com/Rishabhgour157" target="_blank">
+                            </LinkPreviewer>
+                            <LinkPreviewer preview="https://x.com/Rishabhgour157">
                                 <img className="inline-block h-[40px] rounded-full" src={twitter} />
-                            </a>
-                            <a href="https://www.instagram.com/rishabh._.30/" target="_blank">
+                            </LinkPreviewer>
+                            <LinkPreviewer preview="https://www.instagram.com/rishabh._.30/">
                                 <img className="inline-block h-[40px] rounded-full" src={instagram} />
-                            </a>
+                            </LinkPreviewer>
                         </div>
                     </div>
 

@@ -36,7 +36,7 @@ export const FlipWords = ({
             }, duration);
     }, [isAnimating, duration, startAnimation]);
 
-    console.log('currentWord', currentWord);
+    // console.log('currentWord', currentWord);
     return (
         <AnimatePresence
             onExitComplete={() => {

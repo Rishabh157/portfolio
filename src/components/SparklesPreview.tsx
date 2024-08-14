@@ -2,6 +2,7 @@
 import { SparklesCore } from "../../@/components/ui/sparkles";
 import planeImage from "../assets/plane.gif";
 import { AnimationWords } from "./AnimationWords";
+import { Blur } from "./Blur";
 
 export function SparklesPreview() {
     const TITLES = ["Web developer", "SEO analyst", "Backend developer", "Mobile application developer", "Freelancer", "Proud Indian"]
@@ -12,7 +13,7 @@ export function SparklesPreview() {
             <img src={planeImage} className="desktop:h-[240px] laptop:h-[240px] tablet:h-[240px] mobile:h-[140px]" />
 
             <h1 className="name-font-custom-important font-bold text-center text-white relative !z-50 select-none  desktop:text-8xl laptop:text-8xl tablet:text-5xl mobile:text-5xl">
-                Rishabh Gour
+                <Blur title="Rishabh Gour" />
             </h1>
 
             <div className="w-[40rem] h-40 relative">

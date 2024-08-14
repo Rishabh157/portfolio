@@ -8,26 +8,33 @@ import Footer from "./components/Footer";
 import SectionHeading from "./components/SectionHeading";
 import { SparklesPreview } from "./components/SparklesPreview";
 import { IconCloudSkills } from "./components/IconCloudSkills";
+import { LinkPreviewer } from "./components/LinkPreviewer";
+// import { LinkPreviewer } from "./components/LinkPreviewer";
 
 const myStatistics: {
   title: string
-  value: string
+  value: number
+  isPlus: boolean
 }[] = [
     {
       title: 'lines of code',
-      value: '160 000'
+      value: 160000,
+      isPlus: true
     },
     {
       title: 'pixels rendered',
-      value: '301 783 509'
+      value: 301783509,
+      isPlus: false
     },
     {
       title: 'cup of chai',
-      value: '100+'
+      value: 100,
+      isPlus: true
     },
     {
       title: 'projects contributed',
-      value: '22+'
+      value: 22,
+      isPlus: true
     },
   ]
 
@@ -50,21 +57,21 @@ function App() {
 
             {/* Social Medias */}
             <div className="flex gap-[10px] mt-[20px]">
-              <a href="https://github.com/rishabh157" target="_blank">
+              <LinkPreviewer preview="https://github.com/rishabh157">
                 <img className="inline-blockborder-[#000000] p-[1px] border-[1px] h-[50px] rounded-full" src={github} alt="Github" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/rishabh-gour-3b0861221/"
-                target="_blank"
-              >
+              </LinkPreviewer>
+
+              <LinkPreviewer preview="https://www.linkedin.com/in/rishabh-gour-3b0861221/">
                 <img className="inline-block border-[#0b69c7] p-[1px] border-[1px] h-[50px] rounded-full" src={linkedin} alt="Linkedin" />
-              </a>
+              </LinkPreviewer>
+
               <a href="mailto:rishabh157@gmail.com" target="_blank">
                 <img className="inline-block border-[#e3e0e0] p-[1px] border-[1px] h-[50px] rounded-full" src={gmail} alt="Email" />
               </a>
-              <a href="https://x.com/Rishabhgour157" target="_blank">
+
+              <LinkPreviewer preview="https://x.com/Rishabhgour157">
                 <img className="inline-block border-[#00a6de] p-[1px] border-[1px] h-[50px] rounded-full" src={twitter} alt="Twitter" />
-              </a>
+              </LinkPreviewer>
             </div>
           </div>
 
@@ -84,23 +91,21 @@ function App() {
               </a>
               . I am a Computer Science Engineer, currently working with awesome
               folks at{" "}
-              <a target="_blank" href="https://www.codiotic.com/">
+              <LinkPreviewer preview="https://www.codiotic.com/">
                 Codiotic
-              </a>
+              </LinkPreviewer>
             </p>
 
             <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
               Have a look at my{" "}
-              <a target="_blank" href="https://github.com/rishabh157">
+              <LinkPreviewer preview="https://github.com/rishabh157">
                 Github Profile
-              </a>
-              , <a>skills</a> or just connect with me on{" "}
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/rishabh-gour-3b0861221/"
-              >
+              </LinkPreviewer>
+
+              , skills or just connect with me on{" "}
+              <LinkPreviewer preview="https://www.linkedin.com/in/rishabh-gour-3b0861221/">
                 LinkedIn
-              </a>
+              </LinkPreviewer>
               . I am always excited to do business with like minded people, lets
               discuss over coffee.
             </p>
@@ -111,10 +116,10 @@ function App() {
 
         <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[180px] section-statistics">
           {myStatistics?.map(ele => (
-            <Statistics key={ele.value} title={ele.title} value={ele.value} />
+            <Statistics key={ele.value} title={ele.title} value={ele.value} isPlus />
           ))}
         </div>
-      </main>
+      </main >
 
       <div className="border-b-[1px] border-b-[#e7e7e7] mb-16"></div>
 
@@ -127,20 +132,18 @@ function App() {
             <ul className="text-bold list-disc desktop:text-lg pl-4 mt-4 flex flex-col gap-6">
               <li>JavaScript: <span className="font-extralight">Because who doesn’t love a good async/await drama?</span> </li>
               <li>React.js: <span className="font-extralight"> Making the impossible, possible—one hook at a time.</span></li>
-              <li>Next.js: <span className="font-extralight">For when you want SSR but also a side of SEO.  </span></li>
+              <li>Next.js: <span className="font-extralight">For when we want SSR but also a side of SEO.  </span></li>
               <li>Tailwind CSS: <span className="font-extralight"> Styling without the mess (and without the SASS). </span></li>
+              <li>Python: <span className="font-extralight">Because sometimes we need a little indentation in our life.</span></li>
               <li>Postman: <span className="font-extralight">Because even APIs need a little TLC (Testing, Love, and Care).</span></li>
               <li>Git:  <span className="font-extralight">Turning code collaboration into a wild adventure. </span></li>
-              <li>TypeScript:  <span className="font-extralight">Adding types to your JavaScript chaos, because types are fun! </span></li>
-              <li>SCSS:  <span className="font-extralight">Preprocessing for when you need to preprocess your creativity. </span></li>
-              <li>Yarn/NPM: <span className="font-extralight"> Choosing between them is like picking your favorite child. </span></li>
-              <li>GitHub/GitLab: <span className="font-extralight"> Where your code gets a second chance to shine (or fail spectacularly). </span></li>
+              <li>Yarn/NPM: <span className="font-extralight"> Choosing between them is like picking our favorite child. </span></li>
+              <li>GitHub/GitLab: <span className="font-extralight"> Where our code gets a second chance to shine (or fail spectacularly). </span></li>
             </ul>
           </div>
         </div>
         <IconCloudSkills />
       </div>
-
 
       <div className="border-b-[1px] border-b-[#e7e7e7] mt-32"></div>
       {/* <!-- Footer --> */}
