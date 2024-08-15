@@ -9,7 +9,6 @@ import SectionHeading from "./components/SectionHeading";
 import { SparklesPreview } from "./components/SparklesPreview";
 import { IconCloudSkills } from "./components/IconCloudSkills";
 import { LinkPreviewer } from "./components/LinkPreviewer";
-// import { LinkPreviewer } from "./components/LinkPreviewer";
 
 const myStatistics: {
   title: string
@@ -144,6 +143,8 @@ function App() {
         </div>
         <IconCloudSkills />
       </div>
+
+
 
       <div className="border-b-[1px] border-b-[#e7e7e7] mt-32"></div>
       {/* <!-- Footer --> */}
