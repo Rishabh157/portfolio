@@ -24,22 +24,24 @@ export default function NumberTickerUI({
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     isInView &&
       setTimeout(() => {
         motionValue.set(direction === "down" ? 0 : value);
       }, delay * 1000);
   }, [motionValue, isInView, delay, value, direction]);
 
-  useEffect(() =>
-    springValue.on("change", (latest) => {
+
+  useEffect(() => {
+    const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
         ref.current.textContent = Intl.NumberFormat("en-US").format(
-          latest.toFixed(0),
+          Math.round(latest),
         );
       }
-    }),
-    [springValue],
-  );
+    });
+    return () => unsubscribe(); // Cleanup subscription on unmount
+  }, [springValue]);
 
   return (
     <span
