@@ -1,4 +1,4 @@
-"use client";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 // import Image from "next/image";
 import { encode } from "qss";
@@ -31,8 +31,8 @@ export const LinkPreview = ({
   className,
   width = 200,
   height = 125,
-  quality = 50,
-  layout = "fixed",
+  // quality = 50,
+  // layout = "fixed",
   isStatic = false,
   imageSrc = "",
 }: LinkPreviewProps) => {
@@ -56,7 +56,7 @@ export const LinkPreview = ({
 
   const [isOpen, setOpen] = React.useState(false);
 
-  const [isMounted, setIsMounted] = React.useState(false);
+  const [, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
     setIsMounted(true);
@@ -67,7 +67,7 @@ export const LinkPreview = ({
 
   const translateX = useSpring(x, springConfig);
 
-  const handleMouseMove = (event) => {
+  const handleMouseMove = (event: { target: { getBoundingClientRect: () => any; }; clientX: number; }) => {
     const targetRect = event.target.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
     const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
