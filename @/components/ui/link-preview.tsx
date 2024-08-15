@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-// import Image from "next/image";
 import { encode } from "qss";
 import React from "react";
 import {
@@ -9,7 +8,6 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-// import Link from "next/link";
 import { cn } from "../../lib/utils";
 
 type LinkPreviewProps = {
@@ -67,11 +65,14 @@ export const LinkPreview = ({
 
   const translateX = useSpring(x, springConfig);
 
-  const handleMouseMove = (event: { target: { getBoundingClientRect: () => any; }; clientX: number; }) => {
-    const targetRect = event.target.getBoundingClientRect();
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    // const targetRect = event.target.getBoundingClientRect();
+    const target = event.currentTarget as HTMLElement; // Cast to HTMLElement
+    const targetRect = target.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
     const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
     x.set(offsetFromCenter);
+
   };
 
   return (
@@ -98,7 +99,7 @@ export const LinkPreview = ({
         }}
       >
         <HoverCardPrimitive.Trigger
-          onMouseMove={handleMouseMove}
+          onMouseMove={handleMouseMove as any}
           className={cn("text-black dark:text-white", className)}
           href={url}
           target="_blank"
