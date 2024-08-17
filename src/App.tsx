@@ -9,6 +9,7 @@ import SectionHeading from "./components/SectionHeading";
 import { SparklesPreview } from "./components/SparklesPreview";
 import { IconCloudSkills } from "./components/IconCloudSkills";
 import { LinkPreviewer } from "./components/LinkPreviewer";
+import ProjectContainer from "./components/ProjectContainer";
 
 const myStatistics: {
   title: string
@@ -113,12 +114,12 @@ function App() {
 
         <div className="desktop:hidden laptop:hidden tablet:hidden mobile:block border-b-[1px] border-b-[#e7e7e7]"></div>
 
-        <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[180px] section-statistics">
+        {/* <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[180px] section-statistics">
           {myStatistics?.map(ele => (
             <Statistics key={ele.value} title={ele.title} value={ele.value} isPlus />
           ))}
-        </div>
-      </main >
+        </div> */}
+      </main>
 
       <div className="border-b-[1px] border-b-[#e7e7e7] mb-16"></div>
 
@@ -141,14 +142,28 @@ function App() {
             </ul>
           </div>
         </div>
-        <IconCloudSkills />
+        {/* <IconCloudSkills /> */}
       </div>
+
+      <section className="mt-32 px-[40px] h-auto  bg-black py-10">
+        <div className="flex sticky z-50 top-0 py-6 bg-black flex-col items-center justify-center mb-24">
+          <SectionHeading heading="Projects" className="text-white" />
+          <p className="text-[#F5F7FA] text-[18px]">
+            Showcasing My Work: A Glimpse Into My Projects
+          </p>
+        </div>
+
+        <div className="z-0">
+          <ProjectContainer />
+        </div>
+
+      </section>
 
 
 
       <div className="border-b-[1px] border-b-[#e7e7e7] mt-32"></div>
       {/* <!-- Footer --> */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
