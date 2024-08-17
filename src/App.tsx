@@ -10,33 +10,7 @@ import { SparklesPreview } from "./components/SparklesPreview";
 import { IconCloudSkills } from "./components/IconCloudSkills";
 import { LinkPreviewer } from "./components/LinkPreviewer";
 import ProjectContainer from "./components/ProjectContainer";
-
-const myStatistics: {
-  title: string
-  value: number
-  isPlus: boolean
-}[] = [
-    {
-      title: 'lines of code',
-      value: 160000,
-      isPlus: true
-    },
-    {
-      title: 'pixels rendered',
-      value: 301783509,
-      isPlus: false
-    },
-    {
-      title: 'cup of chai',
-      value: 100,
-      isPlus: true
-    },
-    {
-      title: 'projects contributed',
-      value: 22,
-      isPlus: true
-    },
-  ]
+import { myStatistics } from "./data/myStatistics";
 
 function App() {
 
@@ -77,8 +51,6 @@ function App() {
 
 
           <div>
-
-
             <SectionHeading heading="About Me" />
             <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
               Hi I am <a href="/">Rihsabh Gour</a>, a 22 year old Full stack
@@ -114,11 +86,11 @@ function App() {
 
         <div className="desktop:hidden laptop:hidden tablet:hidden mobile:block border-b-[1px] border-b-[#e7e7e7]"></div>
 
-        {/* <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[180px] section-statistics">
+        <div className="grid laptop:grid-cols-4 gap-y-[40px] text-center mt-[180px] section-statistics">
           {myStatistics?.map(ele => (
             <Statistics key={ele.value} title={ele.title} value={ele.value} isPlus />
           ))}
-        </div> */}
+        </div>
       </main>
 
       <div className="border-b-[1px] border-b-[#e7e7e7] mb-16"></div>
@@ -142,7 +114,7 @@ function App() {
             </ul>
           </div>
         </div>
-        {/* <IconCloudSkills /> */}
+        <IconCloudSkills />
       </div>
 
       <section className="mt-32 px-[40px] h-auto  bg-black py-10">
@@ -160,10 +132,9 @@ function App() {
       </section>
 
 
-
       <div className="border-b-[1px] border-b-[#e7e7e7] mt-32"></div>
       {/* <!-- Footer --> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
