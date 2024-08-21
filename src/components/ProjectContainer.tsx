@@ -5,7 +5,6 @@ import Project1 from "../assets/project-1.jpg";
 const ProjectContainer = () => {
     return (
         <div>
-
             <div className="grid grid-cols-4 gap-10  px-28">
                 {projectsData?.map((project, index: number) => (
                     <ProjectCard
@@ -16,7 +15,6 @@ const ProjectContainer = () => {
                     />
                 ))}
             </div>
-
         </div>
     )
 }
