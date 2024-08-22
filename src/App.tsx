@@ -11,6 +11,7 @@ import { IconCloudSkills } from "./components/IconCloudSkills";
 import { LinkPreviewer } from "./components/LinkPreviewer";
 import ProjectContainer from "./components/ProjectContainer";
 import { myStatistics } from "./data/myStatistics";
+import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
 
@@ -131,6 +132,8 @@ function App() {
 
       </section>
 
+
+      <ProjectDetails />
 
 
 
