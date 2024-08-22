@@ -11,7 +11,6 @@ interface ProjectCardPropsType {
 const ProjectCard = ({ imgUrl, projectName, projectType }: ProjectCardPropsType) => {
     return (
         <CardContainer>
-
             <div className="relative group hover:cursor-pointer bg-[#262930] rounded-[18px] border-[1px] border-black p-[12px]">
                 <div className="h-[360px]">
                     <img

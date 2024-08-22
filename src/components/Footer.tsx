@@ -1,6 +1,5 @@
 import { useState } from "react"
 import SectionHeading from "./SectionHeading"
-
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import twitter from "../assets/twitter.png";
@@ -110,9 +109,7 @@ const Footer = () => {
 
                 </div>
             </div>
-
             <div className="footer-bg"></div>
-
         </footer>
     )
 }

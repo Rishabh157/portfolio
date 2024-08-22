@@ -38,11 +38,13 @@ const slugs = [
     "insomnia",
     "postman",
     "yarn",
-    "npmjs",
     "vite",
     "graphql",
     "googlecloud",
     "webpack",
+    "jquery",
+    "linux",
+    "electron",
 ];
 
 export function IconCloudSkills() {
