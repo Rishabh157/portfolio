@@ -3,7 +3,7 @@ import arrowLeft from '../assets/arrow-left.svg';
 
 const ProjectDetails = () => {
 
-    const [open, setOpen] = useState<boolean>(false);
+    const [open, setOpen] = useState<boolean>(true);
 
     // while open the model it would disable the scroll
     useEffect(() => {
