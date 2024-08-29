@@ -118,6 +118,7 @@ function App() {
         <IconCloudSkills />
       </div>
 
+
       <section className="mt-32 px-[40px] h-auto  bg-black py-10">
         <div className="flex sticky z-50 top-0 py-6 bg-black flex-col items-center justify-center mb-24">
           <SectionHeading heading="Projects" className="text-white" />
