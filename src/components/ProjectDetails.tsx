@@ -60,9 +60,10 @@ const ProjectDetails = () => {
                                 </p>
                             </div>
 
-                            <div>
-                                <div className='flex flex-col justify-between gap-4 rounded-[24px] w-[520px]  overflow-hidden p-[32px] bg-[#1A1D24]'>
 
+
+                            <div className='flex gap-4'>
+                                <div className='flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[32px] bg-[#1A1D24]'>
                                     <ul className='flex flex-col gap-y-8 justify-between items-start'>
                                         <li>
                                             <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Client:</span>
@@ -77,9 +78,30 @@ const ProjectDetails = () => {
                                             <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>October '2023</span>
                                         </li>
                                     </ul>
+                                </div>
 
+                                <div className='flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[32px] bg-[#1A1D24]'>
+                                    <ul className='flex flex-col gap-y-8 justify-between items-start'>
+                                        <li>
+                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Frontend:</span>
+                                         <div>
+                                         <span className='text-[16px] flex flex-wrap font-normal -tracking-[0.01em] text-[#F5F7FA]'>
+                                                React, Tailwind,  Redux & <br /> Redux Toolkit,  MUI <br/> (Material-UI)
+                                            </span>
+                                         </div>
+                                        </li>
+                                        <li>
+                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Backend:</span>
+                                            <span className='text-[16px] block font-normal -tracking-[0.01em] text-[#F5F7FA]'>Nodejs, Express</span>
+                                        </li>
+                                        <li>
+                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Tech Stack:</span>
+                                            <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>MERN Stack</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
