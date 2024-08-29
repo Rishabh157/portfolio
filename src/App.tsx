@@ -22,7 +22,6 @@ function App() {
 
       {/* <!-- About --> */}
       <main className="my-[150px] px-[40px]">
-
         <div className="grid gap-[40px] laptop:grid-cols-[0.5fr_1fr] mobile::grid-cols-1 mb-[40px]">
 
           <div className="flex flex-col justify-end items-center">
@@ -94,9 +93,6 @@ function App() {
         </div>
       </main>
 
-      
-      
-
       <div className="border-b-[1px] border-b-[#e7e7e7] mb-16"></div>
 
       {/* <!-- Skills --> */}
@@ -116,6 +112,7 @@ function App() {
               <li>Yarn/NPM: <span className="font-extralight"> Choosing between them is like picking our favorite child. </span></li>
               <li>GitHub/GitLab: <span className="font-extralight"> Where our code gets a second chance to shine (or fail spectacularly). </span></li>
             </ul>
+
           </div>
         </div>
         <IconCloudSkills />
