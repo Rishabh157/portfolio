@@ -95,6 +95,7 @@ const ProjectDetails = () => {
                                             <span className='text-[16px] block font-normal -tracking-[0.01em] text-[#F5F7FA]'>Nodejs, Express</span>
                                         </li>
                                         <li>
+                                            
                                             <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Tech Stack:</span>
                                             <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>MERN Stack</span>
                                         </li>
