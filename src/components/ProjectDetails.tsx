@@ -5,7 +5,7 @@ import Projects001 from '../assets/projects-01jpg.jpg'
 
 const ProjectDetails = () => {
 
-    const [open, setOpen] = useState<boolean>(true);
+    const [open, setOpen] = useState<boolean>(false);
 
     // while open the model it would disable the scroll
     useEffect(() => {
