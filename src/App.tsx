@@ -12,6 +12,7 @@ import { LinkPreviewer } from "./components/LinkPreviewer";
 import ProjectContainer from "./components/ProjectContainer";
 import { myStatistics } from "./data/myStatistics";
 import ProjectDetails from "./components/ProjectDetails";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 
@@ -137,19 +138,12 @@ function App() {
       <ProjectDetails />
 
 
-
-
-
-
-
       <div className="border-b-[1px] border-b-[#e7e7e7] mt-32"></div>
       {/* <!-- Footer --> */}
       <Footer />
 
-
-
-
-
+      {/* Vercel Analytics parts */}
+      <Analytics />
     </>
   );
 }
