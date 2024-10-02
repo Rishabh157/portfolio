@@ -1,11 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import arrowLeft from '../assets/arrow-left.svg';
-
 import Projects001 from '../assets/projects-01jpg.jpg'
+import { ProjectsDataInterface } from '../data/ProjectsData';
 
-const ProjectDetails = () => {
+type ProjectDetailsPropsType = {
+    items: ProjectsDataInterface
+    open: boolean
+    setOpen: (value: boolean) => void
+}
 
-    const [open, setOpen] = useState<boolean>(false);
+const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
+
+    console.log('items: ', items);
 
     // while open the model it would disable the scroll
     useEffect(() => {
@@ -31,82 +37,79 @@ const ProjectDetails = () => {
                 />
             </div>
 
-
             <div className='grid grid-cols-12'>
-
-
                 <div className='col-span-2'></div>
-
                 <div className='col-span-8'>
 
-                    <div className='flex gap-10'>
-
-                        <div className='h-[584px] w-[584px] object-cover ' >
-                            <img
-                                src={Projects001}
-                                alt='icons'
-                                className='h-full w-full rounded-3xl'
-                                onClick={() => setOpen(false)}
-                            />
+                    <div className='grid grid-cols-12 gap-x-4'>
+                        <div className='col-span-5'>
+                            <div className='h-full w-full object-cover'>
+                                <img
+                                    src={Projects001}
+                                    alt='icons'
+                                    className='h-full w-full rounded-3xl'
+                                    onClick={() => setOpen(false)}
+                                />
+                            </div>
                         </div>
 
-                        <div className='flex flex-col gap-8'>
-                            <div className='flex flex-col justify-between gap-4 rounded-[24px] w-[520px]  overflow-hidden p-[32px] bg-[#1A1D24]'>
-
-                                <h1 className='text-[72px]'>Saptel</h1>
-                                <p className='text-[20px] text-justify text-[#F5F7FA]'>
-                                    Dive into the story of how Bringer helped Doughp transform a
-                                    forbidden fruit into a guilt-free sensation, one spoonful at a time.
-                                </p>
-                            </div>
-
-
-
-                            <div className='flex gap-4'>
-                                <div className='flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[32px] bg-[#1A1D24]'>
-                                    <ul className='flex flex-col gap-y-8 justify-between items-start'>
-                                        <li>
-                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Client:</span>
-                                            <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>Provista It Solution</span>
-                                        </li>
-                                        <li>
-                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Service:</span>
-                                            <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>Advertising</span>
-                                        </li>
-                                        <li>
-                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Date:</span>
-                                            <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>October '2023</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className='flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[32px] bg-[#1A1D24]'>
-                                    <ul className='flex flex-col gap-y-8 justify-between items-start'>
-                                        <li>
-                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Frontend:</span>
-                                         <div>
-                                         <span className='text-[16px] flex flex-wrap font-normal -tracking-[0.01em] text-[#F5F7FA]'>
-                                                React, Tailwind,  Redux & <br /> Redux Toolkit,  MUI <br/> (Material-UI)
+                        <div className='col-span-7'>
+                            <div className=' flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[20px] bg-[#1A1D24]'>
+                                <ul className='flex flex-col gap-y-6 justify-between items-start'>
+                                    {
+                                        items?.information?.map((ele, index) => (
+                                            <li key={index}>
+                                                <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>
+                                                    {ele?.heading}:
+                                                </span>
+                                                <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>
+                                                    {ele?.title}
+                                                </span>
+                                            </li>
+                                        ))
+                                    }
+                                    {/* <li>
+                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Service:</span>
+                                        <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>Advertising</span>
+                                    </li>
+                                    <li>
+                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Duration:</span>
+                                        <span className='text-[16px] block font-normal capitalize text-[#F5F7FA]'>2023 - Presentend</span>
+                                    </li>
+                                    <li>
+                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Frontend:</span>
+                                        <div>
+                                            <span className='text-[16px] flex flex-wrap font-normal text-[#F5F7FA]'>
+                                                React, Tailwind,  Redux & Redux Toolkit,  MUI, JS-PDF
                                             </span>
-                                         </div>
-                                        </li>
-                                        <li>
-                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Backend:</span>
-                                            <span className='text-[16px] block font-normal -tracking-[0.01em] text-[#F5F7FA]'>Nodejs, Express</span>
-                                        </li>
-                                        <li>
-                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Tech Stack:</span>
-                                            <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>MERN Stack</span>
-                                        </li>
-                                        <li>
-                                            <span className='text-[12px] block font-semibold tracking-[0.12em] uppercase text-[#F5F7FAC0] mb-[8px]'>Tech Stack:</span>
-                                            <span className='text-[16px] block font-normal -tracking-[0.01em] uppercase text-[#F5F7FA]'>MERN Stack</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Backend:</span>
+                                        <span className='text-[16px] block font-normal text-[#F5F7FA]'>Nodejs, Express</span>
+                                    </li>
+                                    <li>
+                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Database:</span>
+                                        <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>MongoDB</span>
+                                    </li>
+                                    <li>
+                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Tech Stack:</span>
+                                        <span className='text-[16px] block font-normal text-[#F5F7FA]'>MERN Stack</span>
+                                    </li> */}
+                                </ul>
                             </div>
-
                         </div>
+                    </div>
+
+                    <div className='flex mt-8 flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
+                        <h1 className='text-6xl w-full truncate cursor-pointer'
+                            title='Saptel'
+                        >
+                            {items?.projectName}
+                        </h1>
+                        <p className='text-[#F5F7FA]'>
+                            {items?.description}
+                        </p>
                     </div>
 
                 </div>

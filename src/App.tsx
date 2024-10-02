@@ -11,7 +11,6 @@ import { IconCloudSkills } from "./components/IconCloudSkills";
 import { LinkPreviewer } from "./components/LinkPreviewer";
 import ProjectContainer from "./components/ProjectContainer";
 import { myStatistics } from "./data/myStatistics";
-import ProjectDetails from "./components/ProjectDetails";
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -120,22 +119,19 @@ function App() {
       </div>
 
 
-      <section className="mt-32 px-[40px] h-auto  bg-black py-10">
-        <div className="flex sticky z-50 top-0 py-6 bg-black flex-col items-center justify-center mb-24">
+      <section className="mt-32 h-auto  bg-black py-10">
+        <div className="flex sticky px-[40px] z-50 top-0 py-6 bg-black flex-col items-center justify-center mb-24">
           <SectionHeading heading="Projects" className="text-white" />
           <p className="text-[#F5F7FA] text-[18px]">
             Showcasing My Work: A Glimpse Into My Projects
           </p>
         </div>
-
         <div className="z-0">
           <ProjectContainer />
         </div>
-
       </section>
 
 
-      <ProjectDetails />
 
 
       <div className="border-b-[1px] border-b-[#e7e7e7] mt-32"></div>
