@@ -101,6 +101,7 @@ export const projectsData = [
     role: "Time Role",
     teamSize: 7,
   },
+  
   // {
   //   projectName: "City Bazar Online",
   //   projectType: "E-commerce web application",
