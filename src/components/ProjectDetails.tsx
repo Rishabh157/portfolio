@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import arrowLeft from '../assets/arrow-left.svg';
 import Projects001 from '../assets/projects-01jpg.jpg'
 import { ProjectsDataInterface } from '../data/ProjectsData';
@@ -11,7 +11,9 @@ type ProjectDetailsPropsType = {
 
 const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
 
-    console.log('items: ', items);
+
+    const [value, setValue] = useState('')
+    // console.log('items: ', items);
 
     // while open the model it would disable the scroll
     useEffect(() => {
@@ -25,6 +27,10 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
         };
     }, [open]);
 
+
+
+    console.log('Render: ');
+
     return (
         <div className={`${open ? 'visible opacity-100' : 'invisible opacity-0'} transition-all h-screen text-white bg-[#000000E6] fixed top-0 w-full z-50 overflow-y-auto`}>
             {/* Close Icon */}
@@ -36,6 +42,13 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                     onClick={() => setOpen(false)}
                 />
             </div>
+
+            <input
+                className='border border-red-300 text-black'
+                value={value} onChange={(e) => {
+                    setValue(e.target.value)
+                }}
+            />
 
             <div className='grid grid-cols-12'>
                 <div className='col-span-2'></div>
