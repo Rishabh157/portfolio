@@ -11,9 +11,7 @@ type ProjectDetailsPropsType = {
 
 const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
 
-
     const [value, setValue] = useState('')
-    // console.log('items: ', items);
 
     // while open the model it would disable the scroll
     useEffect(() => {
@@ -26,8 +24,6 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
             document.body.style.overflow = ''; // Cleanup on unmount
         };
     }, [open]);
-
-
 
     console.log('Render: ');
 
@@ -69,46 +65,16 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                         <div className='col-span-7'>
                             <div className=' flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[20px] bg-[#1A1D24]'>
                                 <ul className='flex flex-col gap-y-6 justify-between items-start'>
-                                    {
-                                        items?.information?.map((ele, index) => (
-                                            <li key={index}>
-                                                <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>
-                                                    {ele?.heading}:
-                                                </span>
-                                                <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>
-                                                    {ele?.title}
-                                                </span>
-                                            </li>
-                                        ))
-                                    }
-                                    {/* <li>
-                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Service:</span>
-                                        <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>Advertising</span>
-                                    </li>
-                                    <li>
-                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Duration:</span>
-                                        <span className='text-[16px] block font-normal capitalize text-[#F5F7FA]'>2023 - Presentend</span>
-                                    </li>
-                                    <li>
-                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Frontend:</span>
-                                        <div>
-                                            <span className='text-[16px] flex flex-wrap font-normal text-[#F5F7FA]'>
-                                                React, Tailwind,  Redux & Redux Toolkit,  MUI, JS-PDF
+                                    {items?.information?.map((ele, index) => (
+                                        <li key={index}>
+                                            <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>
+                                                {ele?.heading}:
                                             </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Backend:</span>
-                                        <span className='text-[16px] block font-normal text-[#F5F7FA]'>Nodejs, Express</span>
-                                    </li>
-                                    <li>
-                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Database:</span>
-                                        <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>MongoDB</span>
-                                    </li>
-                                    <li>
-                                        <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>Tech Stack:</span>
-                                        <span className='text-[16px] block font-normal text-[#F5F7FA]'>MERN Stack</span>
-                                    </li> */}
+                                            <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>
+                                                {ele?.title}
+                                            </span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -116,7 +82,7 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
 
                     <div className='flex mt-8 flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
                         <h1 className='text-6xl w-full truncate cursor-pointer'
-                            title='Saptel'
+                            title={items?.projectName}
                         >
                             {items?.projectName}
                         </h1>
@@ -124,9 +90,7 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                             {items?.description}
                         </p>
                     </div>
-
                 </div>
-
                 <div className='col-span-2'></div>
             </div>
 
