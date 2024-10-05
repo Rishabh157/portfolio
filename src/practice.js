@@ -9,7 +9,7 @@
 
 // console.log("count", count);
 
-let arr = [1, 2, 1, 3, 5, 1];
+// let arr = [1, 2, 1, 3, 5, 1];
 
 // for (let i = 0; i < arr.length; i++) {
 //   setTimeout(() => {
@@ -17,9 +17,16 @@ let arr = [1, 2, 1, 3, 5, 1];
 //   }, 300);
 // }
 
-for (var i = 0; i < arr.length; i++) {
-  setTimeout(() => {
-    console.log('i' , i);    
-    console.log(arr[i]);
-  }, 300);
-}
+// for (var i = 0; i < arr.length; i++) {
+//   setTimeout(() => {
+//     console.log('i' , i);
+//     console.log(arr[i]);
+//   }, 300);
+// }
+
+const x = [1, 2, 3];
+
+// x[-1] = -1;
+console.log(x[-1])
+console.log(x.indexOf(300))
+console.log(x[x.indexOf(10000)]);
