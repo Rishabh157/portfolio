@@ -24,9 +24,30 @@
 //   }, 300);
 // }
 
-const x = [1, 2, 3];
+// const x = [1, 2, 3];
 
-// x[-1] = -1;
-console.log(x[-1])
-console.log(x.indexOf(300))
-console.log(x[x.indexOf(10000)]);
+// // x[-1] = -1;
+// console.log(x[-1])
+// console.log(x.indexOf(300))
+// console.log(x[x.indexOf(10000)]);
+
+function factorial(string) {
+  let factorial = 1;
+  for (let i = string.length; i > 0; i--) {
+    factorial *= i;
+  }
+  return factorial;
+}
+
+randomChar('ABC')
+// ---------------------------------------
+// ABC
+// ACB
+// BAC
+// BCA
+// CAB
+// CBA
+
+let str = "ABC";
+
+let ans = factorial(str);
