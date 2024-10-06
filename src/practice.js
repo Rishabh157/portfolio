@@ -51,3 +51,4 @@ randomChar('ABC')
 let str = "ABC";
 
 let ans = factorial(str);
+
