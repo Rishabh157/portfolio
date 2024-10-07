@@ -39,7 +39,7 @@ function factorial(string) {
   return factorial;
 }
 
-randomChar('ABC')
+// randomChar("ABC");
 // ---------------------------------------
 // ABC
 // ACB
@@ -50,5 +50,22 @@ randomChar('ABC')
 
 let str = "ABC";
 
-let ans = factorial(str);
+// let ans = factorial(str);
 
+function permutation(array) {
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    let temp = element;
+    for (let j = 0; j < array.length; j++) {
+      const elementJ = array[j];
+      if(array[i] !== array[j]){
+          temp += elementJ;
+      }
+    }
+    console.log("elementJ: ",temp);
+  }
+  
+}
+
+permutation("ABC");
+// 3 + 2 + 1  => 6
