@@ -20,6 +20,7 @@
 // for (var i = 0; i < arr.length; i++) {
 //   setTimeout(() => {
 //     console.log('i' , i);
+
 //     console.log(arr[i]);
 //   }, 300);
 // }
@@ -64,7 +65,7 @@ function permutation(array) {
     }
     console.log("elementJ: ",temp);
   }
-  
+
 }
 
 permutation("ABC");
