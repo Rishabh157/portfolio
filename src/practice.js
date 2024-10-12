@@ -54,6 +54,7 @@ let str = "ABC";
 
 // let ans = factorial(str);
 
+
 function permutation(array) {
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
