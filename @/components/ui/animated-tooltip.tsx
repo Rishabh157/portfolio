@@ -1,6 +1,5 @@
 "use client";
-// import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   motion,
   useTransform,
@@ -32,16 +31,17 @@ export const AnimatedTooltip = ({
     useTransform(x, [-100, 100], [-50, 50]),
     springConfig
   );
-  const handleMouseMove = (event: { target: { offsetWidth: number; }; nativeEvent: { offsetX: number; }; }) => {
-    const halfWidth = event.target.offsetWidth / 2;
-    x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
-  };
+
+  // const handleMouseMove = (event: { target: { offsetWidth: number; }; nativeEvent: { offsetX: number; }; }) => {
+  //   const halfWidth = event.target.offsetWidth / 2;
+  //   x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
+  // };
 
   return (
     <>
       {items.map((item) => (
         <div
-          className="-mr-4  relative group"
+          className="-mr-4  relative group cursor-pointer"
           key={item.name}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -73,18 +73,19 @@ export const AnimatedTooltip = ({
                 <div className="font-bold text-white relative z-30 text-base">
                   {item.name}
                 </div>
-                <div className="text-white text-xs">{item.designation}</div>
+                <div className="text-white text-xs px-2">{item.designation}</div>
               </motion.div>
             )}
           </AnimatePresence>
-          <img
+          LINK
+          {/* <img
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
             src={item.image}
             alt={item.name}
             className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
-          />
+          /> */}
         </div>
       ))}
     </>
