@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import arrowLeft from '../assets/arrow-left.svg';
 import Projects001 from '../assets/projects-01jpg.jpg'
 import { ProjectsDataInterface } from '../data/ProjectsData';
@@ -10,8 +10,6 @@ type ProjectDetailsPropsType = {
 }
 
 const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
-
-    const [value, setValue] = useState('')
 
     // while open the model it would disable the scroll
     useEffect(() => {
@@ -25,8 +23,6 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
         };
     }, [open]);
 
-    console.log('Render: ');
-
     return (
         <div className={`${open ? 'visible opacity-100' : 'invisible opacity-0'} transition-all h-screen text-white bg-[#000000E6] fixed top-0 w-full z-50 overflow-y-auto`}>
             {/* Close Icon */}
@@ -38,13 +34,6 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                     onClick={() => setOpen(false)}
                 />
             </div>
-
-            <input
-                className='border border-red-300 text-black'
-                value={value} onChange={(e) => {
-                    setValue(e.target.value)
-                }}
-            />
 
             <div className='grid grid-cols-12'>
                 <div className='col-span-2'></div>
@@ -81,10 +70,10 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                     </div>
 
                     <div className='flex mt-8 flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
-                        <h1 className='text-6xl w-full truncate cursor-pointer'
+                        <h1 className='text-6xl w-full truncate'
                             title={items?.projectName}
                         >
-                            {items?.projectName}
+                            {items?.projectName} <sup> {items?.liveUrl && <a className='text-xs text-blue-400' href={items?.liveUrl}>LINK</a>} </sup>
                         </h1>
                         <p className='text-[#F5F7FA]'>
                             {items?.description}

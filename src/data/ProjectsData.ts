@@ -2,6 +2,7 @@
 export type ProjectsDataInterface = {
   _id: string;
   projectName: string;
+  liveUrl: string;
   projectType: string;
   title: string;
   description: string;
@@ -19,6 +20,7 @@ export const projectsData = [
   {
     _id: "PRJ001",
     projectName: "Saptel",
+    liveUrl: "https://citybazaronline.com/",
     projectType: "ERP web application",
     title: "StreamlineERP",
     description:
@@ -61,6 +63,7 @@ export const projectsData = [
   {
     _id: "PRJ002",
     projectName: "City Bazar Online",
+    liveUrl: "https://citybazaronline.com/",
     projectType: "E-commerce web application",
     title: "StreamlineERP",
     description:

@@ -6,7 +6,7 @@ import ProjectDetails from "./ProjectDetails";
 
 const ProjectContainer = () => {
 
-    const [open, setOpen] = useState<boolean>(true);
+    const [open, setOpen] = useState<boolean>(false);
     const [projectId, setProjectId] = useState<string>(''); // initial project to be shown
 
     return (
