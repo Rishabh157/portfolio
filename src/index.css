@@ -21,7 +21,7 @@ body {
 }
 
 .section-intro {
-  background: url("/src/assets/clouds.png") repeat-x top center;
+  background: url("/src/assets/clouds.png");
   background-size: contain;
   background-repeat: repeat;
   padding-bottom: 70px;
@@ -31,6 +31,12 @@ body {
   /* border-top: 20px solid #fff; */
   padding-top: 80px;
 }
+
+.section-about{
+  background: url("/src/assets/background.png");
+  background-size: contain;
+}
+
 
 /* Media query for screens 420px wide or smaller */
 @media (max-width: 470px) {

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import arrowLeft from '../assets/arrow-left.svg';
 import Projects001 from '../assets/projects-01jpg.jpg'
 import { ProjectsDataInterface } from '../data/ProjectsData';
+import { AnimatedTooltip } from '../../@/components/ui/animated-tooltip';
 
 type ProjectDetailsPropsType = {
     items: ProjectsDataInterface
@@ -69,11 +70,29 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                         </div>
                     </div>
 
+                    <AnimatedTooltip items={
+                        [
+                            {
+                                id: 1,
+                                name: "Saptel",
+                                designation: "Software EngineerSoftware EngineerSoftware EngineerSoftware EngineerSoftware EngineerSoftware Engineer",
+                                image:
+                                    "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+                            },
+                        ]
+                    } />
+
                     <div className='flex mt-8 flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
                         <h1 className='text-6xl w-full truncate'
                             title={items?.projectName}
                         >
-                            {items?.projectName} <sup> {items?.liveUrl && <a className='text-xs text-blue-400' href={items?.liveUrl}>LINK</a>} </sup>
+                            {items?.projectName}
+
+                            <sup> {items?.liveUrl ?
+                                <a className='text-xs text-blue-400' target='_blank' href={items?.liveUrl}>LINK</a> :
+                                <span className='text-xs text-blue-400'>Info</span>
+                            }
+                            </sup>
                         </h1>
                         <p className='text-[#F5F7FA]'>
                             {items?.description}

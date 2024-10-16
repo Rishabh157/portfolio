@@ -12,7 +12,7 @@ import { LinkPreviewer } from "./components/LinkPreviewer";
 import ProjectContainer from "./components/ProjectContainer";
 import { myStatistics } from "./data/myStatistics";
 import { Analytics } from "@vercel/analytics/react"
-import { AnimatedTooltip } from '../@/components/ui/animated-tooltip'
+// import { AnimatedTooltip } from '../@/components/ui/animated-tooltip'
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <SparklesPreview />
 
       {/* <!-- About --> */}
-      <main className="my-[150px] px-[40px]">
+      <main className="mt-[150px] px-[40px] py-20 section-about">
         <div className="grid gap-[40px] laptop:grid-cols-[0.5fr_1fr] mobile::grid-cols-1 mb-[40px]">
 
           <div className="flex flex-col justify-end items-center">
@@ -54,30 +54,31 @@ function App() {
 
           <div>
             <SectionHeading heading="About Me" />
-            <p className="font-normal text-[23px] text-[#838383] my-[30px] ">
-              Hi I am <a href="/">Rihsabh Gour</a>, a 22 year old Full stack
+            <p className="font-normal text-[23px] text-black my-[30px] ">
+              Hi I am <a href="/" className="text-black font-semibold">Rihsabh Gour</a>, a 22 year old Full stack
               software developer, living in{" "}
               <a
                 target="_blank"
                 href="https://maps.app.goo.gl/K1QLBBEzhEtnotHX8"
+                className="font-semibold text-black"
               >
                 Indore, India
               </a>
               . I am a Computer Science Engineer, currently working with awesome
-              folks at{" "}
-              <LinkPreviewer preview="https://www.codiotic.com/">
+              folks at {" "}
+              <LinkPreviewer className="font-semibold text-black" preview="https://www.codiotic.com/">
                 Codiotic
               </LinkPreviewer>
             </p>
 
-            <p className="font-normal text-[23px] text-[#838383] my-[30px]">
+            <p className="font-normal text-black text-[23px] text-[#838383] my-[30px]">
               Have a look at my{" "}
-              <LinkPreviewer preview="https://github.com/rishabh157">
+              <LinkPreviewer className="font-semibold text-black" preview="https://github.com/rishabh157">
                 Github Profile
               </LinkPreviewer>
 
               , skills or just connect with me on{" "}
-              <LinkPreviewer preview="https://www.linkedin.com/in/rishabh-gour-3b0861221/">
+              <LinkPreviewer className="font-semibold text-black" preview="https://www.linkedin.com/in/rishabh-gour-3b0861221/">
                 LinkedIn
               </LinkPreviewer>
               . I am always excited to do business with like minded people, lets
@@ -95,7 +96,7 @@ function App() {
         </div>
       </main>
 
-      <div className="border-b-[1px] border-b-[#e7e7e7] mb-16"></div>
+      {/* <div className="border-b-[1px] border-b-[#e7e7e7]"></div> */}
 
       {/* <!-- Skills --> */}
       <div className="grid my-[100px] px-[40px] desktop:grid-cols-2 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
@@ -135,7 +136,7 @@ function App() {
 
 
       <div className="flex flex-row items-center justify-center mb-10 w-full">
-        <AnimatedTooltip items={
+        {/* <AnimatedTooltip items={
           [
             {
               id: 1,
@@ -145,7 +146,7 @@ function App() {
                 "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
             },
           ]
-        } />
+        } /> */}
       </div>
 
 
