@@ -20,7 +20,7 @@ export const projectsData = [
   {
     _id: "PRJ001",
     projectName: "Saptel",
-    liveUrl: "https://citybazaronline.com/",
+    liveUrl: "",
     projectType: "ERP web application",
     title: "StreamlineERP",
     description:
@@ -104,7 +104,7 @@ export const projectsData = [
     role: "Time Role",
     teamSize: 7,
   },
-  
+
   // {
   //   projectName: "City Bazar Online",
   //   projectType: "E-commerce web application",

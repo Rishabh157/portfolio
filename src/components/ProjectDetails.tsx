@@ -75,12 +75,6 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                             title={items?.projectName}
                         >
                             {items?.projectName}
-
-                            <sup> {items?.liveUrl ?
-                                <a className='text-xs text-blue-400' target='_blank' href={items?.liveUrl}>LINK</a> :
-                                <span className='text-xs text-blue-400'>Info</span>
-                            }
-                            </sup>
                         </h1>
                         <p className='text-[#F5F7FA]'>
                             {items?.description}
