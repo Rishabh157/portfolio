@@ -71,7 +71,7 @@ function App() {
               </LinkPreviewer>
             </p>
 
-            <p className="font-normal text-black text-[23px] text-[#838383] my-[30px]">
+            <p className="font-normal text-black text-[23px] my-[30px]">
               Have a look at my{" "}
               <LinkPreviewer className="font-semibold text-black" preview="https://github.com/rishabh157">
                 Github Profile
