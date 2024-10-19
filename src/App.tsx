@@ -12,8 +12,6 @@ import { LinkPreviewer } from "./components/LinkPreviewer";
 import ProjectContainer from "./components/ProjectContainer";
 import { myStatistics } from "./data/myStatistics";
 import { Analytics } from "@vercel/analytics/react"
-// import { AnimatedTooltip } from '../@/components/ui/animated-tooltip'
-
 
 function App() {
 
@@ -120,7 +118,6 @@ function App() {
         </div>
         <IconCloudSkills />
       </div>
-
 
       <section className="mt-32 h-auto  bg-black py-10">
         <div className="flex sticky px-[40px] z-50 top-0 py-6 bg-black flex-col items-center justify-center mb-24">

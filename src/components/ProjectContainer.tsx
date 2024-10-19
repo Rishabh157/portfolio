@@ -9,7 +9,7 @@ const ProjectContainer = () => {
     const [open, setOpen] = useState<boolean>(false);
     const [projectId, setProjectId] = useState<string>(''); // initial project to be shown
 
-    // Higher order component
+    // Higher order component with preview of the project link
     const ProjectCardWithLink = withProjectLink(ProjectCard);
 
     return (
