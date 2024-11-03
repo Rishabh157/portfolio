@@ -64,7 +64,7 @@ const Footer = () => {
                     <div className="flex justify-end desktop:w-1/2 laptop:w-1/2 tablet:w-full mobile:w-full" >
                         <button
                             type="submit"
-                            className="bg-primary desktop:w-full laptop::w-full tablet:w-full mobile:w-full px-10 py-2 hover:bg-secondary hover:text-white transition-all rounded"
+                            className="bg-primary text-white desktop:w-full laptop::w-full tablet:w-full mobile:w-full px-10 py-2 hover:bg-secondary hover:text-white transition-all rounded"
                             onClick={() => {
                                 // console.log(values)
                             }}
