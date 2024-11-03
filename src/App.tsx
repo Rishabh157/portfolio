@@ -49,7 +49,6 @@ function App() {
             </div>
           </div>
 
-
           <div>
             <SectionHeading heading="About Me" />
             <p className="font-normal text-[23px] text-black my-[30px] ">
@@ -69,7 +68,7 @@ function App() {
               </LinkPreviewer>
             </p>
 
-            <p className="font-normal text-white text-[23px] my-[30px] bg-indigo-200">
+            <p className="font-normal text-[23px] my-[30px]">
               Have a look at my{" "}
               <LinkPreviewer className="font-semibold text-black" preview="https://github.com/rishabh157">
                 Github Profile
