@@ -28,6 +28,7 @@ export function SparklesPreview() {
                         I am <span> a <AnimationWords words={TITLES} />.
                         </span>
                     </p>
+                    
                 </div>
 
                 {/* Core component */}
