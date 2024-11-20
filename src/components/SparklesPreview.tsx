@@ -37,7 +37,6 @@ export function SparklesPreview() {
                     minSize={0.4}
                     maxSize={1}
                     particleDensity={1200}
-                    
                     className="w-full h-full"
                     particleColor="#FFFFFF"
                 />
