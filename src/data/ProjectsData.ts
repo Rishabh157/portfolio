@@ -14,6 +14,8 @@ export type ProjectsDataInterface = {
   repoUrl: string;
   role: string;
   teamSize: number;
+  challenges: string[];
+  approaches: string[];
 };
 
 export const projectsData = [
@@ -59,6 +61,24 @@ export const projectsData = [
     repoUrl: "https://github.com/yourprofile/saptel-erp",
     role: "Time Role",
     teamSize: 3,
+    challenges: [
+      "Integrating a seamless call center dialer system",
+      "Ensuring real-time order processing",
+      "Developing a scalable and responsive frontend",
+      "Implementing efficient state management with Redux Toolkit",
+      "Optimizing performance for large-scale user interactions",
+      "Coordinating effectively within a small team of 3 developers",
+      "Creating a smooth and efficient sales page to resolve all user queries quickly by leveraging existing customer data, location-based services, and optimized performance",
+    ],
+    approaches: [
+      "Implemented WebSocket technology to ensure real-time updates and seamless integration with the call center dialer system.",
+      "Designed and developed an optimized backend architecture to handle high-volume real-time order processing efficiently.",
+      "Leveraged Tailwind CSS and React to create a scalable, responsive UI that adapts to various screen sizes and devices.",
+      "Utilized Redux Toolkit for state management, ensuring a predictable and maintainable application structure.",
+      "Optimized critical UI components and backend queries to handle large-scale user interactions with minimal latency.",
+      "Adopted Agile methodologies and conducted regular team stand-ups to streamline communication and collaboration within a team of 3 developers.",
+      "Built an intuitive and fast sales page using advanced caching mechanisms, location-based data fetching, and dynamic query optimization to enhance customer query resolution speed.",
+    ],
   },
   {
     _id: "PRJ002",
@@ -68,6 +88,50 @@ export const projectsData = [
     title: "StreamlineERP",
     description:
       "City Bazar is a city-based e-commerce application connecting sellers and consumers. During my internship, I contributed significantly to this project, gaining valuable experience in SEO, Atomic Design Pattern, and writing component tests and test cases. This project played a crucial role in securing my full-time job, and now it serves 3 to 4 lakh customers in the Indore market monthly.",
+    information: [
+      {
+        heading: "Client",
+        title: "City Bazar Online",
+      },
+      {
+        heading: "Service",
+        title: "Retailer Online Selling",
+      },
+      {
+        heading: "Duration",
+        title: "2022 - 2023",
+      },
+      {
+        heading: "My Role",
+        title: "Intern Frontend Developer",
+      },
+      {
+        heading: "Team Size",
+        title: "8",
+      },
+      {
+        heading: "Frontend",
+        title:
+          "Nextjs, Tailwind, Cypress, Storybook, Redux & Redux Toolkit, MUI, Google Maps API",
+      },
+      {
+        heading: "Application Design Methodology",
+        title: "Atomic Design",
+      },
+    ],
+    imgUrl: ["/images/saptel.png", "/images/saptel.png"],
+    repoUrl: "https://github.com/yourprofile/saptel-erp",
+    role: "Time Role",
+    teamSize: 7,
+  },
+  {
+    _id: "PRJ003",
+    projectName: "SJBT",
+    liveUrl: "https://jainbandhutrust.com/",
+    projectType: "E-Pan web application",
+    title: "StreamlineERP",
+    description:
+      "SJBT Project (Shri Jain Bandhu Trust) is a platform designed to facilitate PAN card services across India. During my internship, I contributed significantly to this project, gaining valuable experience in SEO, the Atomic Design Pattern, and writing component tests and test cases. This project played a crucial role in securing my full-time job, and it now serves thousands of users nationwide by streamlining PAN card application and management processes efficiently.",
     information: [
       {
         heading: "Client",

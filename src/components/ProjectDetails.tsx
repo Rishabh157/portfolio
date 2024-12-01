@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import arrowLeft from '../assets/arrow-left.svg';
 import Projects001 from '../assets/projects-01jpg.jpg'
 import { ProjectsDataInterface } from '../data/ProjectsData';
-import check from '../assets/check.svg';
-// import { AnimatedTooltip } from '../../@/components/ui/animated-tooltip';
 
 type ProjectDetailsPropsType = {
     items: ProjectsDataInterface
@@ -13,14 +11,11 @@ type ProjectDetailsPropsType = {
 
 
 
-const Listing = () => {
+const Listing = ({ list }: { list: string[] }) => {
     return (
-        <div className='flex gap-x-2 align-top justify-start'>
-            <div className='h-fit'>
-                <img src={check} alt='' className='' />
-            </div>
-            <span className='text-white'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum delectus voluptate commodi </span>
-        </div>
+        <ul className='list-disc'>
+            {list?.map((ele, ind) => <li key={ind} className='text-[#F5F7FA] text-justify py-2'>{ele}</li>)}
+        </ul>
     )
 }
 
@@ -37,6 +32,9 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
             document.body.style.overflow = ''; // Cleanup on unmount
         };
     }, [open]);
+
+
+    console.log('items', items);
 
     return (
         <div className={`${open ? 'visible opacity-100' : 'invisible opacity-0'} overflow-y-auto h-screen pb-48 transition-all text-white bg-[#000000E6] fixed top-0 w-full z-50`}>
@@ -71,7 +69,7 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                                 <ul className='flex flex-col gap-y-6 justify-between items-start'>
                                     {items?.information?.map((ele, index) => (
                                         <li key={index}>
-                                            <span className='text-[12px] tracking-[0.12em]  block font-semibold uppercase text-[#F5F7FAC0] mb-[8px]'>
+                                            <span className='text-[12px] tracking-[0.12em] block font-semibold uppercase text-[#F5F7FAC0] border-l-[#40b0bd] border-l-[4px] px-2 mb-[8px]'>
                                                 {ele?.heading}:
                                             </span>
                                             <span className='text-[16px] block font-normal uppercase text-[#F5F7FA]'>
@@ -96,22 +94,21 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                     </div>
 
                     <div className='flex gap-x-6'>
-                        <div className='flex mt-8 border border-white flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
-                            <h1 className='text-3xl w-full truncate'>
+                        <div className='mt-8 border border-white rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
+                            <h1 className='text-3xl w-full truncate mb-7'>
                                 The Challanges
                             </h1>
-                            <p className='text-[#F5F7FA] text-[15px]'>
-                                <Listing />
-                            </p>
-
+                            <div className='pl-2'>
+                                <Listing list={items?.challenges} />
+                            </div>
                         </div>
-                        <div className='flex mt-8 flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
-                            <h1 className='text-3xl w-full truncate'>
+                        <div className='mt-8 border border-white rounded-[24px] w-full overflow-hidden p-[20px] bg-[#1A1D24]'>
+                            <h1 className='text-3xl w-full truncate mb-7'>
                                 The Approach
                             </h1>
-                            <p className='text-[#F5F7FA]'>
-                                {items?.description}
-                            </p>
+                            <div className='pl-2'>
+                                <Listing list={items?.approaches} />
+                            </div>
                         </div>
                     </div>
 
