@@ -24,7 +24,7 @@ export const projectsData = [
     projectType: "ERP web application",
     title: "StreamlineERP",
     description:
-      "Saptel is a comprehensive ERP solution developed for a telecommunication company to streamline the management of various departments, including the call center and order processing through an integrated dialer. I was responsible for the entire frontend development, ensuring a seamless and efficient user experience.",
+      "Saptel is a comprehensive ERP solution developed for a teleperformance company to streamline the management of various departments, including the call center and order processing through an integrated dialer. I was responsible for the entire frontend development, ensuring a seamless and efficient user experience.",
     information: [
       {
         heading: "Client",
