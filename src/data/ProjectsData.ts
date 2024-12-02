@@ -34,15 +34,15 @@ export const projectsData = [
       },
       {
         heading: "Service",
-        title: "Advertising",
+        title: "Telemarketing",
       },
       {
         heading: "Duration",
-        title: "2023 - Presentend",
+        title: "JULY 2023 - DEC 2024",
       },
       {
         heading: "My Role & Team Size",
-        title: "Senior Frontend Developer - 3",
+        title: "Senior Frontend Engineer  -  3",
       },
       {
         heading: "Frontend",
@@ -99,11 +99,11 @@ export const projectsData = [
       },
       {
         heading: "Duration",
-        title: "2022 - 2023",
+        title: "JAN 2023 - APRIL 2023",
       },
       {
         heading: "My Role",
-        title: "Intern Frontend Developer",
+        title: "Intern Frontend Engineer",
       },
       {
         heading: "Team Size",
@@ -112,7 +112,7 @@ export const projectsData = [
       {
         heading: "Frontend",
         title:
-          "Nextjs, Tailwind, Cypress, Storybook, Redux & Redux Toolkit, MUI, Google Maps API",
+          "Nextjs, Tailwind, Cypress, Storybook, Redux & Redux Toolkit, MUI, Google Maps API, Cypress Component Testing",
       },
       {
         heading: "Application Design Methodology",
@@ -123,6 +123,24 @@ export const projectsData = [
     repoUrl: "https://github.com/yourprofile/saptel-erp",
     role: "Time Role",
     teamSize: 7,
+    challenges: [
+      "Designing a user-friendly interface for an e-commerce platform connecting sellers and consumers.",
+      "Ensuring seamless integration of product listings and real-time inventory updates.",
+      "Developing a scalable and responsive frontend to accommodate a growing user base.",
+      "Implementing efficient state management for handling product categories, filters, and cart functionalities.",
+      "Optimizing page load times and performance for a fast and engaging user experience.",
+      "Collaborating effectively with a small team during the internship to meet project deadlines.",
+      "Creating a smooth and efficient order tracking page to help users easily access their order status and resolve queries quickly by leveraging real-time data and location-based services.",
+    ],
+    approaches: [
+      "Used React and Tailwind CSS to design a visually appealing and user-friendly interface tailored for e-commerce needs.",
+      "Implemented API integration to fetch product listings and ensure real-time synchronization with inventory data.",
+      "Developed a fully responsive design to ensure optimal user experience across devices and screen sizes.",
+      "Utilized Redux Toolkit for efficient state management of product categories, filters, cart data, and user sessions.",
+      "Performed performance optimizations, such as lazy loading images and prefetching data, to enhance page load speeds.",
+      "Communicated regularly with the team during Agile sprints to ensure alignment and timely delivery of tasks.",
+      "Built a dedicated order tracking page with real-time updates, utilizing advanced caching and geolocation features for enhanced query resolution.",
+    ],
   },
   {
     _id: "PRJ003",
@@ -135,7 +153,7 @@ export const projectsData = [
     information: [
       {
         heading: "Client",
-        title: "City Bazar Online",
+        title: "Shri Jain Bandhu Trust",
       },
       {
         heading: "Service",
@@ -143,20 +161,20 @@ export const projectsData = [
       },
       {
         heading: "Duration",
-        title: "2022 - 2023",
+        title: "MARCH 2023 - JULY 2024",
       },
       {
         heading: "My Role",
-        title: "Intern Frontend Developer",
+        title: "Intern Frontend Engineer",
       },
       {
         heading: "Team Size",
-        title: "8",
+        title: "4",
       },
       {
         heading: "Frontend",
         title:
-          "Nextjs, Tailwind, Cypress, Storybook, Redux & Redux Toolkit, MUI, Google Maps API",
+          "Nextjs, React, Typescript, Tailwind, Storybook, Redux & Redux Toolkit & Some Extrnal Packages",
       },
       {
         heading: "Application Design Methodology",
@@ -167,21 +185,25 @@ export const projectsData = [
     repoUrl: "https://github.com/yourprofile/saptel-erp",
     role: "Time Role",
     teamSize: 7,
+    challenges: [
+      "Developing a user-friendly interface for managing PAN card applications, Gumasta licenses, and ITR filing services.",
+      "Ensuring seamless integration of form submissions and document uploads for user applications.",
+      "Building a scalable and responsive frontend to accommodate users across diverse devices and regions.",
+      "Implementing efficient state management for tracking user applications and administrative workflows.",
+      "Optimizing the application for fast performance, ensuring smooth navigation and minimal load times.",
+      "Designing and developing key features of the admin panel to facilitate application review and approval processes.",
+      "Collaborating with the backend team to integrate APIs for real-time status updates and secure data handling.",
+    ],
+    approaches: [
+      "Designed a clean and intuitive user interface using React and Tailwind CSS to simplify the application process.",
+      "Implemented file upload functionality with progress tracking to ensure a seamless document submission experience.",
+      "Developed a fully responsive frontend design to cater to users across various devices and screen sizes.",
+      "Utilized Redux Toolkit to manage user application data and admin workflows efficiently.",
+      "Enhanced performance through techniques like lazy loading, caching, and optimizing API calls.",
+      "Built critical components of the admin panel, including dashboards and application review modules, to streamline administrative tasks.",
+      "Integrated backend APIs for real-time application status updates and ensured secure data transmission through proper validation.",
+    ],
   },
-
-  // {
-  //   projectName: "City Bazar Online",
-  //   projectType: "E-commerce web application",
-  //   title: "StreamlineERP",
-  //   description:
-  //     "Dive into the story of how Bringer helped Doughp transform a forbidden fruit into a guilt-free sensation, one spoonful at a time.",
-  //   imgUrl: citybazaronline,
-  //   cardImg: "",
-  //   alt: "",
-  //   client: "",
-  //   service: "",
-  //   techStack: ["React", "Typescript", "Redux"],
-  // },
   // {
   //   projectName: "Kite & Upstox",
   //   projectType: "Copy Trading web application",

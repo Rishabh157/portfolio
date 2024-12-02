@@ -82,13 +82,13 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                         </div>
                     </div>
 
-                    <div className='flex mt-8 flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#7a15de]'>
+                    <div className='flex mt-8 flex-col justify-between gap-4 rounded-[24px] w-full overflow-hidden p-[20px] bg-[#40b0bd]'>
                         <h1 className='text-6xl w-full truncate'
                             title={items?.projectName}
                         >
                             {items?.projectName}
                         </h1>
-                        <p className='text-[#F5F7FA]'>
+                        <p className='text-[#F5F7FA] text-base'>
                             {items?.description}
                         </p>
                     </div>
