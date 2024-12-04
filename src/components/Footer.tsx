@@ -10,14 +10,18 @@ type FormTypes = {
     name: string
     email: string
     message?: string
+    dateTime?: Date | null
 }
 
 const Footer = () => {
+
+    // const scriptUrl = 'https://script.google.com/macros/s/AKfycbzd4wVVmxGorimhw4ej_-i6hBR43QEID8qQV-5rmScXQxBOe1-4z88XnI20upIT58N2/exec';
 
     const [values, setValues] = useState<FormTypes>({
         name: '',
         email: '',
         message: '',
+        dateTime: new Date(),
     })
 
     return (
@@ -28,52 +32,60 @@ const Footer = () => {
                     <p className="text-center mb-[40px] text-[#3a3a3a] text-[0.2px] text-xl font-normal">I am always excited to work on some awesome projects, message me and let's discuss over coffee.</p>
                 </div>
 
-                <div className="flex flex-col gap-4 items-center justify-center">
-
-                    <div className="desktop:flex laptop:flex tablet:block mobile:block gap-4 desktop:w-1/2 laptop:w-1/2 table:w-full mobile:w-full">
-                        <div className="w-full">
-                            <input
-                                required
-                                type="text"
-                                className="outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2 tablet:mb-4 mobile:mb-4"
-                                placeholder="Your Name"
-                                value={values.name}
-                                onChange={(event) => setValues((pre) => ({ ...pre, name: event?.target?.value }))}
-                            />
-                            {/* <span className="text-red-500 text-sm">Please Enter the name</span> */}
+                <form
+                    method="post"
+                    action="https://script.google.com/macros/s/AKfycbxh7t7M_P41vjbOh2CZhXB6EPg3VV3RmLvNEn2egq-O9j-t3pp2AbrGxx1Cr1ZIGfZE/exec"
+                    name="contact-form"
+                >
+                    <div className="flex flex-col gap-4 items-center justify-center">
+                        <div className="desktop:flex laptop:flex tablet:block mobile:block gap-4 desktop:w-1/2 laptop:w-1/2 table:w-full mobile:w-full">
+                            <div className="w-full">
+                                <input
+                                    name="name"
+                                    required
+                                    type="text"
+                                    className="outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2 tablet:mb-4 mobile:mb-4"
+                                    placeholder="Your Name"
+                                    value={values.name}
+                                    onChange={(event) => setValues((pre) => ({ ...pre, name: event?.target?.value }))}
+                                />
+                                {/* <span className="text-red-500 text-sm">Please Enter the name</span> */}
+                            </div>
+                            <div className="w-full">
+                                <input
+                                    name="email"
+                                    required
+                                    type="email"
+                                    className="outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2 tablet:mb-4 mobile:mb-4"
+                                    placeholder="Your Email"
+                                    value={values.email}
+                                    onChange={(event) => setValues((pre) => ({ ...pre, email: event?.target?.value }))}
+                                />
+                            </div>
                         </div>
-                        <div className="w-full">
-                            <input
-                                required
-                                type="email"
-                                className="outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2 tablet:mb-4 mobile:mb-4"
-                                placeholder="Your Email"
-                                value={values.email}
-                                onChange={(event) => setValues((pre) => ({ ...pre, email: event?.target?.value }))}
-                            />
+                        <textarea
+                            name='message'
+                            className="outline-none placeholder:font-light desktop:w-1/2 laptop:w-1/2 tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2"
+                            placeholder="Write a message for me here..."
+                            value={values.message}
+                            rows={4}
+                            onChange={(event) => setValues((pre) => ({ ...pre, message: event?.target?.value }))}
+                        />
+
+                        <div className="flex justify-end desktop:w-1/2 laptop:w-1/2 tablet:w-full mobile:w-full" >
+                            <button
+                                type="submit"
+                                className="bg-primary text-white desktop:w-full laptop::w-full tablet:w-full mobile:w-full px-10 py-2 hover:bg-secondary hover:text-white transition-all rounded"
+                                onClick={() => {
+                                    // console.log(values)
+                                }}
+                            >
+                                Submit
+                            </button>
                         </div>
                     </div>
-                    <textarea
-                        className="outline-none placeholder:font-light desktop:w-1/2 laptop:w-1/2 tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2"
-                        placeholder="Write a message for me here..."
-                        value={values.message}
-                        rows={4}
-                        onChange={(event) => setValues((pre) => ({ ...pre, message: event?.target?.value }))}
-                    />
+                </form>
 
-                    <div className="flex justify-end desktop:w-1/2 laptop:w-1/2 tablet:w-full mobile:w-full" >
-                        <button
-                            type="submit"
-                            className="bg-primary text-white desktop:w-full laptop::w-full tablet:w-full mobile:w-full px-10 py-2 hover:bg-secondary hover:text-white transition-all rounded"
-                            onClick={() => {
-                                // console.log(values)
-                            }}
-                        >
-                            Submit
-                        </button>
-                    </div>
-
-                </div>
 
                 <div className="desktop:flex laptop:flex tablet:block mobile:block justify-center  gap-x-20 items-start text-center mt-16 text-[#848484] text-[15px]">
 
