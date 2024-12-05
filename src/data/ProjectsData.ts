@@ -12,7 +12,6 @@ export type ProjectsDataInterface = {
   }[];
   imgUrl: string[];
   repoUrl: string;
-  role: string;
   teamSize: number;
   challenges: string[];
   approaches: string[];
@@ -59,7 +58,6 @@ export const projectsData = [
     ],
     imgUrl: ["/images/saptel.png", "/images/saptel.png"],
     repoUrl: "https://github.com/yourprofile/saptel-erp",
-    role: "Time Role",
     teamSize: 3,
     challenges: [
       "Integrating a seamless call center dialer system",
@@ -121,7 +119,6 @@ export const projectsData = [
     ],
     imgUrl: ["/images/saptel.png", "/images/saptel.png"],
     repoUrl: "https://github.com/yourprofile/saptel-erp",
-    role: "Time Role",
     teamSize: 7,
     challenges: [
       "Designing a user-friendly interface for an e-commerce platform connecting sellers and consumers.",
@@ -183,7 +180,6 @@ export const projectsData = [
     ],
     imgUrl: ["/images/saptel.png", "/images/saptel.png"],
     repoUrl: "https://github.com/yourprofile/saptel-erp",
-    role: "Time Role",
     teamSize: 7,
     challenges: [
       "Developing a user-friendly interface for managing PAN card applications, Gumasta licenses, and ITR filing services.",
@@ -204,6 +200,127 @@ export const projectsData = [
       "Integrated backend APIs for real-time application status updates and ensured secure data transmission through proper validation.",
     ],
   },
+  {
+    _id: "PRJ004",
+    projectName: "SLD",
+    liveUrl: "https://smartlearningdestination.com/",
+    projectType: "Ed-Tech web application",
+    title: "Smart Learning Destination (SLD)",
+    description:
+      "SLD is an Ed-Tech platform where students pursuing CA, CS, and CMA courses can select and purchase classes from top faculties. This platform bridges the gap between students and educators by offering high-quality content and an intuitive user experience. I contributed as a React Engineer, focusing on optimizing performance and enhancing the overall speed and responsiveness of the website.",
+    information: [
+      {
+        heading: "Client",
+        title: "Smart Learning Destination",
+      },
+      {
+        heading: "Service",
+        title: "Ed-Tech Services",
+      },
+      {
+        heading: "Duration",
+        title: "FEB 2023 - MARCH 2023",
+      },
+      {
+        heading: "My Role",
+        title: "React Engineer",
+      },
+      {
+        heading: "Team Size",
+        title: "3",
+      },
+      {
+        heading: "Frontend",
+        title: "Next.js, React, TypeScript, Tailwind CSS, Axios, Context Api ",
+      },
+      {
+        heading: "Application Design Methodology",
+        title: "N/A",
+      },
+    ],
+    imgUrl: ["/images/saptel.png", "/images/saptel.png"],
+    repoUrl: "https://github.com/yourprofile/saptel-erp",
+    teamSize: 7,
+    challenges: [
+      "Developing a user-friendly interface for managing PAN card applications, Gumasta licenses, and ITR filing services.",
+      "Ensuring seamless integration of form submissions and document uploads for user applications.",
+      "Building a scalable and responsive frontend to accommodate users across diverse devices and regions.",
+      "Implementing efficient state management for tracking user applications and administrative workflows.",
+      "Optimizing the application for fast performance, ensuring smooth navigation and minimal load times.",
+      "Designing and developing key features of the admin panel to facilitate application review and approval processes.",
+      "Collaborating with the backend team to integrate APIs for real-time status updates and secure data handling.",
+    ],
+    approaches: [
+      "Designed a clean and intuitive user interface using React and Tailwind CSS to simplify the application process.",
+      "Implemented file upload functionality with progress tracking to ensure a seamless document submission experience.",
+      "Developed a fully responsive frontend design to cater to users across various devices and screen sizes.",
+      "Utilized Redux Toolkit to manage user application data and admin workflows efficiently.",
+      "Enhanced performance through techniques like lazy loading, caching, and optimizing API calls.",
+      "Built critical components of the admin panel, including dashboards and application review modules, to streamline administrative tasks.",
+      "Integrated backend APIs for real-time application status updates and ensured secure data transmission through proper validation.",
+    ],
+  },
+  {
+    _id: "PRJ005",
+    projectName: "Geeksdoor",
+    liveUrl: "https://geeksdoor.com/",
+    projectType: "Ed-Tech coding platform",
+    title: "Geeksdoor - Learn to Code",
+    description:
+      "Geeksdoor is an Ed-Tech coding platform offering courses in Full Stack Development, Python, AI/ML, and other trending technologies. Students can choose and purchase courses to enhance their technical skills. As a React Frontend Engineer, I contributed by optimizing the platform’s performance and developing a key feature: a Resume Builder for users to create professional resumes directly on the site.",
+    information: [
+      {
+        heading: "Client",
+        title: "Geeksdoor",
+      },
+      {
+        heading: "Service",
+        title: "Coding Courses Platform",
+      },
+      {
+        heading: "Duration",
+        title: "APRIL 2024 - JULY 2024",
+      },
+      {
+        heading: "My Role",
+        title: "React Frontend Engineer",
+      },
+      {
+        heading: "Team Size",
+        title: "2",
+      },
+      {
+        heading: "Frontend",
+        title:
+          "Next, TypeScript, Tailwind CSS, ShadCN Component Library  , Redux Toolkit",
+      },
+      {
+        heading: "Application Design Methodology",
+        title: "Atomic Design Pattern",
+      },
+    ],
+    imgUrl: ["/images/geeksdoor.png", "/images/geeksdoor-feature.png"],
+    repoUrl: "https://github.com/yourprofile/geeksdoor-edtech",
+    teamSize: 6,
+    challenges: [
+      "Enhancing platform performance to provide a smooth course browsing and purchasing experience.",
+      "Developing a Resume Builder tool that allows users to create and download professional resumes.",
+      "Ensuring seamless integration of payment gateways for course purchases.",
+      "Optimizing state management for handling complex course data and user profiles.",
+      "Creating reusable and scalable components using the Atomic Design Pattern.",
+      "Collaborating with designers to implement a responsive and visually appealing UI.",
+    ],
+    approaches: [
+      "Optimized site performance through lazy loading, caching, and efficient API integration.",
+      "Built a fully functional Resume Builder tool with customizable templates and PDF download functionality.",
+      "Designed reusable components using React and Tailwind CSS to ensure consistent UI/UX.",
+      "Implemented Redux Toolkit for state management to handle user data and application workflows effectively.",
+      "Enhanced the platform's responsiveness for seamless use across all devices and screen sizes.",
+      "Collaborated with the backend team to integrate APIs for secure payments and real-time updates.",
+      "Conducted thorough testing and debugging to ensure smooth deployment and scalability.",
+    ],
+  },
+
   // {
   //   projectName: "Kite & Upstox",
   //   projectType: "Copy Trading web application",
@@ -216,33 +333,6 @@ export const projectsData = [
   //   client: "",
   //   service: "",
   //   techStack: ["React", "Typescript", "Redux"],
-  // },
-  // {
-  //   projectName: "SLD",
-  //   projectType: "EdTech for CA students",
-  //   title: "StreamlineERP",
-  //   description:
-  //     "Dive into the story of how Bringer helped Doughp transform a forbidden fruit into a guilt-free sensation, one spoonful at a time.",
-  //   imgUrl: "",
-  //   cardImg: "",
-  //   alt: "",
-  //   client: "",
-  //   service: "",
-  //   techStack: ["React", "Typescript", "Redux"],
-  // },
-  // {
-  //   projectName: "SJBT",
-  //   projectType: "Pan Card service platform",
-  //   title: "StreamlineERP",
-  //   description:
-  //     "Dive into the story of how Bringer helped Doughp transform a forbidden fruit into a guilt-free sensation, one spoonful at a time.",
-  //   imgUrl: "",
-  //   cardImg: "",
-  //   alt: "",
-  //   client: "",
-  //   service: "",
-  //   techStack: ["React", "Typescript", "Redux"],
-  // },
   // {
   //   projectName: "Geeksdoor",
   //   projectType: "Digital education platform",
