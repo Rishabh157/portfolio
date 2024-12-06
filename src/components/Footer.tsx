@@ -77,7 +77,6 @@ const Footer = () => {
         }).catch((err) => {
             console.error('err', err);
         });
-
     }
 
     return (
