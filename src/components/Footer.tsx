@@ -9,7 +9,6 @@ import { LinkPreviewer } from "./LinkPreviewer";
 const Footer = () => {
 
     const [apiStatus, setApiStatus] = useState<boolean>(false);
-    const [emailError, setEmailError] = useState<string | null>(null);
 
     interface FormValues {
         [key: string]: string; // Key-value pairs for form data
@@ -53,18 +52,10 @@ const Footer = () => {
     };
 
 
-    const validateEmail = (email: string): boolean => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
-        return emailRegex.test(email);
-    };
-
-
-
     const handleSubmit = () => {
 
         setApiStatus(true)
         const URL = import.meta.env.VITE_SCRIPT_URL;
-        console.log('URL: ', URL);
 
         // Add formatted date-time to the form values
         const formData = new FormData();
@@ -84,7 +75,7 @@ const Footer = () => {
             })
             setApiStatus(false)
         }).catch((err) => {
-            console.log('err', err);
+            console.error('err', err);
         });
 
     }
@@ -109,27 +100,20 @@ const Footer = () => {
                                 value={values.name}
                                 onChange={(event) => setValues((pre) => ({ ...pre, name: event?.target?.value }))}
                             />
-                            {/* <span className="text-red-500 text-sm">Please Enter the name</span> */}
                         </div>
                         <div className="w-full tablet:mb-4 mobile:mb-4">
                             <input
                                 name="email"
                                 required
                                 type="email"
-                                className={`outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] ${emailError ? 'border-red-500' : 'border-gray-300'} rounded px-2 py-2`}
+                                className={`outline-none placeholder:font-light desktop:w-full laptop:w-full tablet:w-full mobile:w-full border-[1px] border-gray-300 rounded px-2 py-2`}
                                 placeholder="Your Email"
                                 value={values.email}
                                 onChange={(event) => {
                                     const emailValue = event.target.value;
                                     setValues((prev) => ({ ...prev, email: emailValue }));
-                                    if (!validateEmail(emailValue)) {
-                                        setEmailError("Please enter a valid email address.");
-                                    } else {
-                                        setEmailError(null);
-                                    }
                                 }}
                             />
-                            {emailError && <span className="text-red-500 text-sm">{emailError}</span>}
                         </div>
                     </div>
                     <textarea
