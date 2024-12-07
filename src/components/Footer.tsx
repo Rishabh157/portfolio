@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import SectionHeading from "./SectionHeading"
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
@@ -9,6 +9,7 @@ import { LinkPreviewer } from "./LinkPreviewer";
 const Footer = () => {
 
     const [apiStatus, setApiStatus] = useState<boolean>(false);
+    const [successMsg, setSuccessMsg] = useState<string>('');
 
     interface FormValues {
         [key: string]: string; // Key-value pairs for form data
@@ -20,7 +21,6 @@ const Footer = () => {
         message: '',
         dateTime: '', // Adding a dateTime field
     })
-
 
     const formatDateTime = () => {
         const now = new Date();
@@ -52,6 +52,7 @@ const Footer = () => {
     };
 
 
+    // submit the form
     const handleSubmit = () => {
 
         setApiStatus(true)
@@ -74,10 +75,16 @@ const Footer = () => {
                 message: '',
             })
             setApiStatus(false)
+            setSuccessMsg('I appreciate your time and will respond at the earliest convenience.');
         }).catch((err) => {
             console.error('err', err);
         });
     }
+
+    // reset the message
+    useEffect(() => {
+        setTimeout(() => setSuccessMsg(''), 7000)
+    }, [successMsg])
 
     return (
         <footer>
@@ -134,6 +141,7 @@ const Footer = () => {
                             {apiStatus ? '...' : 'Submit'}
                         </button>
                     </div>
+                    <p className="text-green-400 font-semibold text-base">{successMsg}</p>
                 </div>
 
                 <div className="desktop:flex laptop:flex tablet:block mobile:block justify-center  gap-x-20 items-start text-center mt-16 text-[#848484] text-[15px]">
@@ -171,7 +179,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bg"></div>
-        </footer>
+        </footer >
     )
 }
 
