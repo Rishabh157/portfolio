@@ -19,7 +19,7 @@ const ProjectContainer = () => {
                 open={open}
                 setOpen={() => setOpen(!open)}
             />
-            <div className="grid grid-cols-4 gap-10  px-28">
+            <div className="grid desktop:grid-cols-4 laptop:grid-cols-3 tablet:grid-cols-3 mobile:grid-cols-1 gap-10 desktop:px-28 laptop:px-24 tablet:px-20 mobile:px-10">
                 {projectsData?.map((project, index: number) => (
                     !project?.liveUrl ? <ProjectCard
                         key={index}

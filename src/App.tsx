@@ -52,7 +52,7 @@ function App() {
           <div>
             <SectionHeading heading="About Me" />
             <p className="font-normal text-[23px] text-black my-[30px] ">
-              Hi I am <a href="/" className="text-black font-semibold">Rihsabh Gour</a>, a 22 year old Full stack
+              Hi I am <a href="/" className="text-black mobile:text-black font-semibold">Rihsabh Gour</a>, a 22 year old Full stack
               software developer, living in{" "}
               <a
                 target="_blank"
@@ -70,7 +70,7 @@ function App() {
 
             <p className="font-normal text-[23px] my-[30px]">
               Have a look at my{" "}
-              <LinkPreviewer className="font-semibold text-black" preview="https://github.com/rishabh157">
+              <LinkPreviewer className="font-semibold text-black mobile:text-black" preview="https://github.com/rishabh157">
                 Github Profile
               </LinkPreviewer>
 

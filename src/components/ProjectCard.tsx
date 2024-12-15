@@ -17,7 +17,7 @@ const ProjectCard = ({ projectId, imgUrl, projectName, projectType, onOpen }: Pr
             <div className="relative hover:cursor-pointer bg-[#262930] rounded-[18px] border-[1px] border-black p-[12px]"
                 onClick={() => onOpen(projectId)}
             >
-                <div className="h-[360px]">
+                <div>
                     <img
                         src={imgUrl}
                         alt="Project1"

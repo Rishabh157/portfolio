@@ -46,7 +46,7 @@ export default function NumberTickerUI({
   return (
     <span
       className={cn(
-        "inline-block tabular-nums dark:text-white tracking-wider",
+        "inline-block tabular-nums tracking-wider",
         className,
       )}
       ref={ref}
