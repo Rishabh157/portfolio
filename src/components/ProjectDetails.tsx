@@ -34,7 +34,7 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
     return (
         <div className={`${open ? 'visible opacity-100' : 'invisible opacity-0'} overflow-y-auto h-screen pb-48 transition-all text-white bg-[#000000E6] fixed top-0 w-full z-50`}>
             {/* Close Icon */}
-            <div className="h-14 flex items-center pl-6 sticky top-0">
+            <div className="h-14 flex items-center pl-6 sticky top-0 mobile:bg-black">
                 <img
                     src={arrowLeft}
                     alt='arrow-left'
@@ -44,10 +44,13 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
             </div>
 
             <div className='grid grid-cols-12'>
-                <div className='col-span-2'></div>
-                <div className='col-span-8'>
+
+                <div className='desktop:col-span-2 laptop:col-span-2 tablet:col-span-2 mobile:hidden'></div>
+
+                <div className='desktop:col-span-8 laptop:col-span-8 tablet:col-span-8 mobile:col-span-12'>
+
                     <div className='grid grid-cols-12 gap-x-4'>
-                        <div className='col-span-5'>
+                        <div className='col-span-5 desktop:block laptop:block tablet:block mobile:hidden'>
                             <div className='h-full w-full object-cover'>
                                 <img
                                     src={Projects001}
@@ -57,7 +60,7 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                                 />
                             </div>
                         </div>
-                        <div className='col-span-7'>
+                        <div className='desktop:col-span-7 laptop:col-span-7 tablet:col-span-7 mobile:col-span-12'>
                             <div className=' flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[20px] bg-[#1A1D24]'>
                                 <ul className='flex flex-col gap-y-6 justify-between items-start'>
                                     {items?.information?.map((ele, index) => (
@@ -105,7 +108,7 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                         </div>
                     </div>
                 </div>
-                <div className='col-span-2'></div>
+                <div className='col-span-2 mobile:hidden'></div>
             </div>
         </div>
     )
