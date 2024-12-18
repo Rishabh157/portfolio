@@ -203,6 +203,7 @@ export const projectsData = [
   {
     _id: "PRJ004",
     projectName: "SLD",
+    fullName: "Smart Learning Destination",
     liveUrl: "https://smartlearningdestination.com/",
     projectType: "Ed-Tech web application",
     title: "Smart Learning Destination (SLD)",
