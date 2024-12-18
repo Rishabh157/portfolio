@@ -45,12 +45,12 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
 
             <div className='grid grid-cols-12'>
 
-                <div className='desktop:col-span-2 laptop:col-span-2 tablet:col-span-2 mobile:hidden'></div>
+                <div className='col-span-2'></div>
 
-                <div className='desktop:col-span-8 laptop:col-span-8 tablet:col-span-8 mobile:col-span-12'>
+                <div className='col-span-8'>
 
                     <div className='grid grid-cols-12 gap-x-4'>
-                        <div className='col-span-5 desktop:block laptop:block tablet:block mobile:hidden'>
+                        <div className='col-span-5'>
                             <div className='h-full w-full object-cover'>
                                 <img
                                     src={Projects001}
@@ -60,7 +60,7 @@ const ProjectDetails = ({ items, open, setOpen }: ProjectDetailsPropsType) => {
                                 />
                             </div>
                         </div>
-                        <div className='desktop:col-span-7 laptop:col-span-7 tablet:col-span-7 mobile:col-span-12'>
+                        <div className='col-span-7 '>
                             <div className=' flex flex-col w-full justify-between gap-4 rounded-[24px] overflow-hidden p-[20px] bg-[#1A1D24]'>
                                 <ul className='flex flex-col gap-y-6 justify-between items-start'>
                                     {items?.information?.map((ele, index) => (
