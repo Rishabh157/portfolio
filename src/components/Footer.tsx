@@ -6,6 +6,8 @@ import twitter from "../assets/twitter.png";
 import instagram from "../assets/instagram.png";
 import { LinkPreviewer } from "./LinkPreviewer";
 
+const ATMLoader = () => <div className="h-[30px] w-[30px] border-[2px] border-t-blue-500 border-gray-300 rounded-full animate-spin inline-block"></div>
+
 const Footer = () => {
 
     const [apiStatus, setApiStatus] = useState<boolean>(false);
@@ -138,7 +140,7 @@ const Footer = () => {
                             className={`${apiStatus ? 'opacity-60' : 'opacity-100'} bg-primary text-white desktop:w-full laptop::w-full tablet:w-full mobile:w-full px-10 py-2 hover:bg-secondary hover:text-white transition-all rounded`}
                             onClick={handleSubmit}
                         >
-                            {apiStatus ? '...' : 'Submit'}
+                            {apiStatus ? <ATMLoader /> : 'Submit'}
                         </button>
                     </div>
                     <p className="text-green-400 font-semibold text-base">{successMsg}</p>
